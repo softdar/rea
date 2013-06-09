@@ -4,8 +4,8 @@ Proyecto para la apertura de recursos educativos de la Universidad Nacional de L
 
 ## Estado del proyecto
 
-* branch master [![Build Status](https://travis-ci.org/delucas/rea.png?branch=master)](https://travis-ci.org/delucas/rea)
-* branch development [![Build Status](https://travis-ci.org/delucas/rea.png?branch=development)](https://travis-ci.org/delucas/rea)
+* [![Build Status](https://travis-ci.org/delucas/rea.png?branch=master)](https://travis-ci.org/delucas/rea) - [master](https://github.com/delucas/rea)
+* [![Build Status](https://travis-ci.org/delucas/rea.png?branch=development)](https://travis-ci.org/delucas/rea) - [development](https://github.com/delucas/rea/tree/development)
 
 ## Cómo colaborar
 
