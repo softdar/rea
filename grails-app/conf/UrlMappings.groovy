@@ -6,6 +6,8 @@ class UrlMappings {
 				// apply constraints here
 			}
 		}
+		
+		"/$username/classes/$classname"(controller:'lecture', action:'show')
 
 		"/"(view:"/index")
 		"500"(view:'/error')
