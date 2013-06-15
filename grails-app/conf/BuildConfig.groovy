@@ -61,5 +61,7 @@ grails.project.dependency.resolution = {
 		compile ":twitter-bootstrap:2.3.0"
 		compile ":font-awesome-resources:3.0"
         compile ':cache:1.0.1'
+
+		test ":code-coverage:1.2.6"
     }
 }
