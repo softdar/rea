@@ -54,13 +54,30 @@
 	</div>
 
 	<script>
+
+		function resizeVideoIframes() {
+			theContainer = $("#theContent").parent()
+			iframe = $("iframe")
+
+			iframe.height(theContainer.height() - 60)
+			iframe.width(theContainer.width())
+		}
+
 		$(function() {
+
+			$(window).on('resize', function() {
+				resizeVideoIframes()
+			});
+
 			$(".selectable").on('click', function(e) {
 				$("#theContent").html($("div#" + $(this).attr('id')).html());
 				$(".selectable").removeClass("active");
 				$(this).addClass("active");
+				resizeVideoIframes()
 			});
+
 			$("li#content_0").click();
+
 		});
 	</script>
 
