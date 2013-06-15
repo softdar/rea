@@ -1,0 +1,31 @@
+@media ( min-width : 960px) {
+	body {
+		padding-top: 60px;
+	}
+	.container {
+		width: 960px !important;
+	}
+}
+
+@media ( max-width : 767px) {
+	div#index.framed {
+		height: 100%;
+		margin: 20px 0;
+	}
+}
+
+div.framed {
+	border: 1px solid #DDD;
+	height: 450px;
+}
+div.framed h3 {
+	padding-left: 10px;
+}
+
+div.framed div.text {
+	padding-left: 10px;
+}
+
+li.selectable {
+	list-style:none;
+}
