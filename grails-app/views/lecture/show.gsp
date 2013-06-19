@@ -21,12 +21,12 @@
 	<div class="clear"></div>
 
 	<div class="row-fluid">
-		<div class="span9 framed">
+		<div id="main" class="span9 framed">
 
 			<div id="theContent"></div>
 
 		</div>
-		<div id="index" class="span3 pull-right framed">
+		<div id="index" class="span3 framed">
 
 			<header>
 				<h3>Temario</h3>
@@ -78,7 +78,17 @@
 
 			$("li#content_0").click();
 
+			enquire.register("screen and (max-width:767px)", {
+				match : function() {
+					$("#index").insertBefore($("#main"))
+				},
+				unmatch : function() {
+					$("#index").insertAfter($("#main"))
+				}
+			});
+
 		});
+
 	</script>
 
 </body>
