@@ -1,3 +1,20 @@
+/* INTRO */
+
+body.intro {
+	padding-top: 0px;
+}
+
+footer {
+	background: url("../img/tweed.png") repeat scroll 0 0 transparent;
+    height: 245px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    margin-top: 50px;
+}
+
+/* APP */
+
 @media ( min-width : 960px) {
 	body {
 		padding-top: 60px;
@@ -6,6 +23,7 @@
 		width: 960px !important;
 	}
 }
+
 
 @media ( max-width : 767px) {
 	div#index.framed {
