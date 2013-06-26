@@ -17,6 +17,7 @@ class LectureControllerTests {
 
 		assert 200 == response.status
 		assert '/lecture/show' == view
+		assert model.content
 		
 	}
 }
