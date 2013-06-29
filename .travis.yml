@@ -4,4 +4,4 @@ branches:
     - master
     - development
 script: ./grailsw refresh-dependencies
-  && ./grailsw test-app
+  && ./grailsw test-app -coverage -xml
