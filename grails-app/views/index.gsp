@@ -35,9 +35,10 @@
 <r:layoutResources />
 
 <style>
- /* GLOBAL STYLES
+/* GLOBAL STYLES
     -------------------------------------------------- */
-	/* Padding below the footer and lighter body text */ body {
+/* Padding below the footer and lighter body text */
+body {
 	padding-bottom: 40px;
 	color: #5a5a5a;
 }
@@ -58,6 +59,7 @@
 }
 
 .navbar-wrapper .navbar {
+	
 }
 
 /* Remove border and change up box shadow for more contrast */
@@ -232,6 +234,7 @@
 		margin-right: -20px;
 	}
 	.carousel .container {
+		
 	}
 	.carousel .item {
 		height: 300px;
@@ -281,25 +284,12 @@
 						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 							class="icon-bar"></span>
 					</button>
-					<a class="brand" href="#">Project name</a>
-					<!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+					<a class="brand" href="#">open.rea!</a>
 					<div class="nav-collapse collapse">
 						<ul class="nav">
-							<li class="active"><a href="#">Home</a></li>
-							<li><a href="#about">About</a></li>
-							<li><a href="#contact">Contact</a></li>
-							<!-- Read about Bootstrap dropdowns at http://twitter.github.com/bootstrap/javascript.html#dropdowns -->
-							<li class="dropdown"><a href="#" class="dropdown-toggle"
-								data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Action</a></li>
-									<li><a href="#">Another action</a></li>
-									<li><a href="#">Something else here</a></li>
-									<li class="divider"></li>
-									<li class="nav-header">Nav header</li>
-									<li><a href="#">Separated link</a></li>
-									<li><a href="#">One more separated link</a></li>
-								</ul></li>
+							<li class="active"><a href="#">Inicio</a></li>
+							<li><a href="#about">Sobre REA</a></li>
+							<li><a href="#contact">Contacto</a></li>
 						</ul>
 					</div>
 					<!--/.nav-collapse -->
@@ -320,7 +310,7 @@
 	<div id="myCarousel" class="carousel slide">
 		<div class="carousel-inner">
 			<div class="item active">
-				<img src="http://twitter.github.io/bootstrap/assets/img/examples/slide-01.jpg" alt="">
+				<img src="${resource(dir: 'img', file: 'carousel-1.jpg')}" alt="">
 				<div class="container">
 					<div class="carousel-caption">
 						<h1>Example headline.</h1>
@@ -332,7 +322,7 @@
 				</div>
 			</div>
 			<div class="item">
-				<img src="http://twitter.github.io/bootstrap/assets/img/examples/slide-02.jpg" alt="">
+				<img src="${resource(dir: 'img', file: 'carousel-3.jpg')}" alt="">
 				<div class="container">
 					<div class="carousel-caption">
 						<h1>Another example headline.</h1>
@@ -344,7 +334,9 @@
 				</div>
 			</div>
 			<div class="item">
-				<img src="http://twitter.github.io/bootstrap/assets/img/examples/slide-03.jpg" alt="">
+				<img
+					src="http://twitter.github.io/bootstrap/assets/img/examples/slide-03.jpg"
+					alt="">
 				<div class="container">
 					<div class="carousel-caption">
 						<h1>One more for good measure.</h1>
@@ -373,11 +365,13 @@
 		<div class="row-fluid">
 			<div class="span4">
 				<img class="img-circle" src="http://placehold.it/140x140">
-				<h2>Heading</h2>
-				<p>Donec sed odio dui. Etiam porta sem malesuada magna mollis
-					euismod. Nullam id dolor id nibh ultricies vehicula ut id elit.
-					Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-					Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+				<h2>
+					¿Qué son los <acronym title="Recursos Educativos Abiertos">REA</acronym>?
+				</h2>
+				<p>La principal ventaja que poseen los REA es su condición de
+					abierto, porque esta apertura permite que alrededor de ellos se
+					generen diversas comunidades de interes en todo el mundo al igual
+					que como en el famoso caso del sistema operativo Linux.</p>
 				<p>
 					<a class="btn" href="#">View details &raquo;</a>
 				</p>
@@ -385,12 +379,12 @@
 			<!-- /.span4 -->
 			<div class="span4">
 				<img class="img-circle" src="http://placehold.it/140x140">
-				<h2>Heading</h2>
-				<p>Duis mollis, est non commodo luctus, nisi erat porttitor
-					ligula, eget lacinia odio sem nec elit. Cras mattis consectetur
-					purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo,
-					tortor mauris condimentum nibh, ut fermentum massa justo sit amet
-					risus.</p>
+				<h2>Movimiento abierto</h2>
+				<p>La valoración de que algo sea abierto vino dada a fines de la
+					década de los 70 de la mano de Richard Stallman. Con el tiempo el
+					contenido que se fue abriendo no se limitó a programas de software,
+					hoy en día existen libros, música, videos,
+					películas.</p>
 				<p>
 					<a class="btn" href="#">View details &raquo;</a>
 				</p>
@@ -398,11 +392,11 @@
 			<!-- /.span4 -->
 			<div class="span4">
 				<img class="img-circle" src="http://placehold.it/140x140">
-				<h2>Heading</h2>
-				<p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in,
-					egestas eget quam. Vestibulum id ligula porta felis euismod semper.
-					Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
-					nibh, ut fermentum massa justo sit amet risus.</p>
+				<h2>Dimensiones</h2>
+				<p>Hay tres dimensiones de apertura que poseen los Recursos
+					Educativos Abiertos: Dimensión tecnológica. Formato abierto: Su
+					contenido puede leerse, editarse, y redistribuirse sin que para
+					ello se deban utilizar programas propietarios.</p>
 				<p>
 					<a class="btn" href="#">View details &raquo;</a>
 				</p>
@@ -411,58 +405,25 @@
 		</div>
 		<!-- /.row -->
 
-
-		<!-- START THE FEATURETTES -->
-
-		<hr class="featurette-divider">
-
-		<div class="featurette">
-			<img class="featurette-image pull-right"
-				src="http://twitter.github.io/bootstrap/assets/img/examples/browser-icon-chrome.png">
-			<h2 class="featurette-heading">
-				First featurette headling. <span class="muted">It'll blow
-					your mind.</span>
-			</h2>
-			<p class="lead">Donec ullamcorper nulla non metus auctor
-				fringilla. Vestibulum id ligula porta felis euismod semper. Praesent
-				commodo cursus magna, vel scelerisque nisl consectetur. Fusce
-				dapibus, tellus ac cursus commodo.</p>
-		</div>
-
-		<hr class="featurette-divider">
-
-		<div class="featurette">
-			<img class="featurette-image pull-left"
-				src="http://twitter.github.io/bootstrap/assets/img/examples/browser-icon-firefox.png">
-			<h2 class="featurette-heading">
-				Oh yeah, it's that good. <span class="muted">See for
-					yourself.</span>
-			</h2>
-			<p class="lead">Donec ullamcorper nulla non metus auctor
-				fringilla. Vestibulum id ligula porta felis euismod semper. Praesent
-				commodo cursus magna, vel scelerisque nisl consectetur. Fusce
-				dapibus, tellus ac cursus commodo.</p>
-		</div>
-
-		<hr class="featurette-divider">
-
-		<div class="featurette">
-			<img class="featurette-image pull-right"
-				src="http://twitter.github.io/bootstrap/assets/img/examples/browser-icon-safari.png">
-			<h2 class="featurette-heading">
-				And lastly, this one. <span class="muted">Checkmate.</span>
-			</h2>
-			<p class="lead">Donec ullamcorper nulla non metus auctor
-				fringilla. Vestibulum id ligula porta felis euismod semper. Praesent
-				commodo cursus magna, vel scelerisque nisl consectetur. Fusce
-				dapibus, tellus ac cursus commodo.</p>
-		</div>
-
-		<!-- /END THE FEATURETTES -->
-
-
 		<!-- FOOTER -->
 		<footer>
+			<div class="container">
+
+				<!-- Three columns of text below the carousel -->
+				<div class="row-fluid">
+					<div class="span4">
+					
+						<ul class="links">
+							<li>
+								<i class="icon-github"></i>
+								<a href="http://www.github.com/delucas/rea">código fuente</a>
+							</li>
+						</ul>
+					
+					</div>
+				</div>
+			</div>
+
 		</footer>
 
 	</div>
