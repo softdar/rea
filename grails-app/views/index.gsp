@@ -132,6 +132,17 @@ body {
 	margin-top: 200px;
 }
 
+.carousel-caption.well {
+	background-color: rgba(35, 35, 35, 0.5);
+	border-color: #000;
+	padding: 30px 15px;
+	margin-top: 135px;
+}
+
+.carousel-caption.well h1,.carousel-caption.well p {
+	text-shadow: 1px 1px 2px #000 !important;
+}
+
 .carousel-caption h1,.carousel-caption .lead {
 	margin: 0;
 	line-height: 1.25;
@@ -312,37 +323,32 @@ body {
 			<div class="item active">
 				<img src="${resource(dir: 'img', file: 'carousel-1.jpg')}" alt="">
 				<div class="container">
-					<div class="carousel-caption">
-						<h1>Example headline.</h1>
-						<p class="lead">Cras justo odio, dapibus ac facilisis in,
-							egestas eget quam. Donec id elit non mi porta gravida at eget
-							metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-						<a class="btn btn-large btn-primary" href="#">Sign up today</a>
+					<div class="carousel-caption well">
+						<h1>Apertura</h1>
+						<p class="lead">La condición principal de los recursos
+							educativos abiertos.</p>
+						<a href="#modalVideo" class="btn btn-large btn-primary" data-toggle="modal">Ver video explicativo</a>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<img src="${resource(dir: 'img', file: 'carousel-2.jpg')}" alt="">
+				<div class="container">
+					<div class="carousel-caption well">
+						<h1>Colaboración</h1>
+						<p class="lead">La principal competencia y motor de la
+							innovación del siglo XXI.</p>
+						<a class="btn btn-large btn-primary" href="#">Learn more</a>
 					</div>
 				</div>
 			</div>
 			<div class="item">
 				<img src="${resource(dir: 'img', file: 'carousel-3.jpg')}" alt="">
 				<div class="container">
-					<div class="carousel-caption">
-						<h1>Another example headline.</h1>
-						<p class="lead">Cras justo odio, dapibus ac facilisis in,
-							egestas eget quam. Donec id elit non mi porta gravida at eget
-							metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-						<a class="btn btn-large btn-primary" href="#">Learn more</a>
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				<img
-					src="http://twitter.github.io/bootstrap/assets/img/examples/slide-03.jpg"
-					alt="">
-				<div class="container">
-					<div class="carousel-caption">
-						<h1>One more for good measure.</h1>
-						<p class="lead">Cras justo odio, dapibus ac facilisis in,
-							egestas eget quam. Donec id elit non mi porta gravida at eget
-							metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+					<div class="carousel-caption well">
+						<h1>Dominio Publico</h1>
+						<p class="lead">Licencia que permite revisar, reusar, remixar,
+							y redistribuir los recursos educativos abiertos.</p>
 						<a class="btn btn-large btn-primary" href="#">Browse gallery</a>
 					</div>
 				</div>
@@ -353,7 +359,22 @@ body {
 	</div>
 	<!-- /.carousel -->
 
-
+	<div id="modalVideo" class="modal hide fade" tabindex="-1"
+		role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal"
+				aria-hidden="true">×</button>
+			<h3 id="myModalLabel">Recursos Educativos Abiertos</h3>
+		</div>
+		<div class="modal-body">
+			<script type="text/javascript" src="http://s3.amazonaws.com/s3.www.universalsubtitles.org/embed.js">
+			({"video_url": "http://vimeo.com/43456503"})
+			</script>
+		</div>
+		<div class="modal-footer">
+			<button class="btn" data-dismiss="modal" aria-hidden="true">Volver</button>
+		</div>
+	</div>
 
 	<!-- Marketing messaging and featurettes
     ================================================== -->
@@ -366,42 +387,112 @@ body {
 			<div class="span4">
 				<img class="img-circle" src="http://placehold.it/140x140">
 				<h2>
-					¿Qué son los <acronym title="Recursos Educativos Abiertos">REA</acronym>?
+					¿Qué son los <abbr title="Recursos Educativos Abiertos">REA</abbr>?
 				</h2>
-				<p>La principal ventaja que poseen los REA es su condición de
-					abierto, porque esta apertura permite que alrededor de ellos se
-					generen diversas comunidades de interes en todo el mundo al igual
-					que como en el famoso caso del sistema operativo Linux.</p>
+				<p>Lorem ipsum.</p>
 				<p>
-					<a class="btn" href="#">View details &raquo;</a>
+					<a href="#modalREA" role="button" class="btn" data-toggle="modal">Detalles &raquo;</a>
 				</p>
 			</div>
-			<!-- /.span4 -->
+
+			<div id="modalREA" class="modal hide fade" tabindex="-1"
+				role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">×</button>
+					<h3 id="myModalLabel">Recursos Educativos Abiertos (REA)</h3>
+				</div>
+				<div class="modal-body">
+					<p>La principal ventaja que poseen los REA es su condición de
+						abierto, porque esta apertura permite que alrededor de ellos se
+						generen diversas comunidades de interes en todo el mundo al igual
+						que como en el famoso caso del sistema operativo Linux.</p>
+					<p>Estas comunidades no solo pueden crear de manera
+						colaborativa los REA, sino que sobre todo pueden Revisar, Reusar,
+						Remixar, y Redistribuir miles de REA ya existentes en Internet sin
+						impedimentos legales, sociales, o impedimentos tecnológicos.</p>
+				</div>
+				<div class="modal-footer">
+					<button class="btn" data-dismiss="modal" aria-hidden="true">Volver</button>
+				</div>
+			</div>
+
 			<div class="span4">
 				<img class="img-circle" src="http://placehold.it/140x140">
 				<h2>Movimiento abierto</h2>
-				<p>La valoración de que algo sea abierto vino dada a fines de la
-					década de los 70 de la mano de Richard Stallman. Con el tiempo el
-					contenido que se fue abriendo no se limitó a programas de software,
-					hoy en día existen libros, música, videos,
-					películas.</p>
+				<p>Lorem ipsum.</p>
 				<p>
-					<a class="btn" href="#">View details &raquo;</a>
+					<a href="#modalOpenMovement" role="button" class="btn"
+						data-toggle="modal">Detalles &raquo;</a>
 				</p>
 			</div>
-			<!-- /.span4 -->
+
+			<div id="modalOpenMovement" class="modal hide fade" tabindex="-1"
+				role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">×</button>
+					<h3 id="myModalLabel">Movimiento abierto</h3>
+				</div>
+				<div class="modal-body">
+					<p>La valoración de que algo sea abierto vino dada a fines de
+						la década de los 70s de la mano de Richard Stallman. Con el tiempo
+						el contenido que se fue abriendo no se limitó a programas de
+						software, hoy en día existen libros, enciclopedias, música,
+						videos, películas, entre otros.</p>
+					<p>De la misma manera que la apertura fue llegando a distintos
+						tipos de contenido, el movimiento abierto se fue ampliando hacia a
+						otras industrias. Entre estas se encuentra la industria de la
+						educación. En la actualidad el movimiento abierto está tomando
+						cada día más fuerza. Hay más de 400.000 obras con licencias poco o
+						nada restrictivas fomentando una cultura abierta.</p>
+				</div>
+				<div class="modal-footer">
+					<button class="btn" data-dismiss="modal" aria-hidden="true">Volver</button>
+				</div>
+			</div>
+
 			<div class="span4">
 				<img class="img-circle" src="http://placehold.it/140x140">
 				<h2>Dimensiones</h2>
-				<p>Hay tres dimensiones de apertura que poseen los Recursos
-					Educativos Abiertos: Dimensión tecnológica. Formato abierto: Su
-					contenido puede leerse, editarse, y redistribuirse sin que para
-					ello se deban utilizar programas propietarios.</p>
+				<p>Lorem ipsum.</p>
 				<p>
-					<a class="btn" href="#">View details &raquo;</a>
+					<a href="#modalDimensions" role="button" class="btn"
+						data-toggle="modal">Detalles &raquo;</a>
 				</p>
 			</div>
-			<!-- /.span4 -->
+
+			<div id="modalDimensions" class="modal hide fade" tabindex="-1"
+				role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">×</button>
+					<h3 id="myModalLabel">Dimensiones</h3>
+				</div>
+				<div class="modal-body">
+					<p>Hay tres dimensiones de apertura que poseen los Recursos
+						Educativos Abiertos:</p>
+					<p>
+					<ul>
+						<li><strong>Dimensión tecnológica. Formato abierto.</strong>
+							Su contenido puede leerse, editarse, y redistribuirse sin que
+							para ello se deban utilizar programas propietarios.</li>
+						<li><strong>Dimensión social. Contexto abierto.</strong> Se
+							encuentran diponibles en internet, su acceso debe ser simple,
+							masivo y gratuito.</li>
+						<li><strong>Dimensión legal. Licencia abierta.</strong> No
+							deben tener restricciones de derecho de autor (Copyright),
+							pertenecen al dominio público y se encuentran bajo licencias poco
+							o nada restrictivas. Una opción ampliamente difundida de licencia
+							abierta es Creative Commons.</li>
+					</ul>
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button class="btn" data-dismiss="modal" aria-hidden="true">Volver</button>
+				</div>
+			</div>
+
 		</div>
 		<!-- /.row -->
 
@@ -412,14 +503,12 @@ body {
 				<!-- Three columns of text below the carousel -->
 				<div class="row-fluid">
 					<div class="span4">
-					
+
 						<ul class="links">
-							<li>
-								<i class="icon-github"></i>
-								<a href="http://www.github.com/delucas/rea">código fuente</a>
-							</li>
+							<li><i class="icon-github"></i> <a
+								href="http://www.github.com/delucas/rea">código fuente</a></li>
 						</ul>
-					
+
 					</div>
 				</div>
 			</div>
