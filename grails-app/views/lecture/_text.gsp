@@ -4,7 +4,7 @@
 			${theContent.title}
 		</h3>
 		<div class="text">
-			<p>${theContent.data.text}</p>
+			<p>${theContent.text}</p>
 		</div>
 	</div>
 </div>
