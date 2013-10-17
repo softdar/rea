@@ -11,7 +11,7 @@
 
 		<header class="well">
 			<h1>
-				${content.target.title}<small> por ${content.target.username}</small>
+				${content.target.title}<small> por ${content.target.user.username}</small>
 			</h1>
 			<p>
 				${content.target.brief}

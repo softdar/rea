@@ -1,8 +1,12 @@
-package rea
+package rea.domain
 
 import grails.test.mixin.*
 
 import org.junit.*
+
+import rea.User
+import rea.content.Content
+import rea.content.VideoContent
 
 /**
  * See the API for {@link grails.test.mixin.domain.DomainClassUnitTestMixin} for usage instructions
@@ -14,7 +18,8 @@ class VideoContentTests {
 		new VideoContent(
 			title: 'Introducción',
 			type: 'video',
-			url: 'http://www.youtube.com/embed/cGT_YHZ7M7s'
+			url: 'http://www.youtube.com/embed/cGT_YHZ7M7s',
+			user: new User(username:'delucas', password: 'pipo')
 		)
 	}
 	

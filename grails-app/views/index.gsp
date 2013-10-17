@@ -303,6 +303,9 @@ body {
 							<li><a href="#contact">Contacto</a></li>
 						</ul>
 					</div>
+					<ul class="nav pull-right">
+				      <li><g:link controller="login" class="pull-right">Ingresar</g:link></li>
+				    </ul>
 					<!--/.nav-collapse -->
 				</div>
 				<!-- /.navbar-inner -->

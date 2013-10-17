@@ -1,8 +1,12 @@
-package rea
+package rea.domain
 
 import grails.test.mixin.*
 
 import org.junit.*
+
+import rea.User
+import rea.content.Content
+import rea.content.TextContent
 
 /**
  * See the API for {@link grails.test.mixin.domain.DomainClassUnitTestMixin} for usage instructions
@@ -14,7 +18,8 @@ class TextContentTests {
 		new TextContent(
 			title: 'Introducción a la probabilidad',
 			type: 'text',
-			text: 'Algún texto'
+			text: 'Algún texto',
+			user: new User(username:'delucas', password: 'pipo')
 		)
 	}
 	

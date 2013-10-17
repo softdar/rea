@@ -1,4 +1,4 @@
-package rea
+package rea.content
 
 class TextContent extends Content {
 

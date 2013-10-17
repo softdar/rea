@@ -1,8 +1,8 @@
-package rea
-
+package rea.domain
 import grails.test.mixin.*
+import rea.User
+import rea.content.Content
 
-import org.junit.*
 
 /**
  * See the API for {@link grails.test.mixin.domain.DomainClassUnitTestMixin} for usage instructions
@@ -14,6 +14,7 @@ class ContentTests {
 		new Content(
 			title: 'Some title',
 			type: 'some',
+			user: new User(username:'delucas', password: 'pipo')
 		)
 	}
 	
@@ -36,6 +37,14 @@ class ContentTests {
 		
 		Content content = buildValidContent()
 		content.type = null
+		
+		assert !content.validate()
+	}
+	
+	void testNoUser_NotValid() {
+		
+		Content content = buildValidContent()
+		content.user = null
 		
 		assert !content.validate()
 	}

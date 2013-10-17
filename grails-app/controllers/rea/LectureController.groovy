@@ -1,26 +1,24 @@
 package rea
 
 import grails.converters.JSON
+import grails.plugin.springsecurity.annotation.Secured;
 
 class LectureController {
 
+	def lectureService
+
+	@Secured('IS_AUTHENTICATED_ANONYMOUSLY')
 	def show() {
 
-		// dummy data
-//		def content = [
-//			name: 'probabilidad', title: 'Nociones de probabilidad', username: 'delucas',
-//			brief: 'Esta es una introducción breve a la probabilidad que pretende demostrar cómo funciona la plataforma básica',
-//			contents: [
-//				[title: 'Introducción', type: 'video', data: [ url: 'http://www.youtube.com/embed/cGT_YHZ7M7s']],
-//				[title: 'Probabilidad: concepto básico', type: 'text', data: [ text: 'La probabilidad mide la frecuencia con la que se obtiene un resultado (o conjunto de resultados) y luego al llevar a cabo un experimento aleatorio, del que se conocen todos los resultados posibles, bajo condiciones suficientemente estables.']],
-//				[title: 'Cuestionario', type: 'multiple-choice', data: [
-//						[question: '¿Qué es la probabilidad?', options: [[number: 1, text: 'Una ciencia que extiende la matemática'], [number: 2, text: 'Una disciplina que se encarga de procesos estocásticos'], [number: 3, text: 'Una función de la calculadora']], answer: 2, more: 'La probabilidad es la rama de las matemáticas que estudia los resultados posibles de los fenómenos aleatorios'],
-//						[question: '¿Qué significa "Estocástico"?', options: [[number: 1, text: 'Aleatorio'],[number: 2, text: 'Determinístico'],[number: 3, text: 'Pseudoaleatorio']], answer: 1, more: 'Algo determinístico es aquello que no varía conforme no varíen las circunstancias en que se inscribe']
-//					]]
-//			]]
+		String username = params['username']
+		String classname = params['classname']
 
-		def lecture = Lecture.findByUsernameAndName('delucas', 'probabilidad')
+		def lecture = lectureService.findLecture(username, classname)
 
-		render view: 'show', model: [content: lecture as JSON]
+		if (!lecture) {
+			response.status = 404
+		} else {
+			render view: 'show', model: [content: lecture as JSON]
+		}
 	}
 }

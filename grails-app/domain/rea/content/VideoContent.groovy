@@ -1,4 +1,4 @@
-package rea
+package rea.content
 
 class VideoContent extends Content {
 
