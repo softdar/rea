@@ -1,9 +1,9 @@
 import rea.Lecture
 import rea.Role
-import rea.TextContent
 import rea.User
 import rea.UserRole
-import rea.VideoContent
+import rea.content.TextContent
+import rea.content.VideoContent
 
 fixture {
 

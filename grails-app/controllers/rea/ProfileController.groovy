@@ -15,6 +15,6 @@ class ProfileController {
 		def lectures = Lecture.findAllByUser(user)
 		def contents = Content.findAllByUser(user)
 
-		render view: 'dashboard', model: [lectures: lectures as JSON, contents: contents as JSON]
+		render view: 'dashboard', model: [user: user, lectures: lectures, resources: contents]
 	}
 }

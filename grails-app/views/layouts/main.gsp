@@ -49,14 +49,16 @@
 				<a class="brand" href="#"><i class="icon-unlock"
 					style="color: white;"></i> rea</a>
 				<div class="nav-collapse collapse">
-					<p class="navbar-text pull-right">
-						Bienvenido, usuario
-					</p>
 					<ul class="nav">
 						<li class="active"><a href="#">Inicio</a></li>
 						<li><a href="#about">Acerca de <strong>rea</strong></a></li>
 						<li><a href="#contact">Contacto</a></li>
 					</ul>
+					<sec:ifLoggedIn>
+						<p class="navbar-text pull-right">
+							Bienvenido, #<sec:loggedInUserInfo field="username"></sec:loggedInUserInfo>
+						</p>
+					</sec:ifLoggedIn>
 				</div>
 				<!--/.nav-collapse -->
 			</div>
