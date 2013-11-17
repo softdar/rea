@@ -46,17 +46,16 @@
 					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
-				<a class="brand" href="#"><i class="icon-unlock"
+				<a class="brand" href="${createLink(uri: '/')}"><i class="icon-unlock"
 					style="color: white;"></i> rea</a>
 				<div class="nav-collapse collapse">
 					<ul class="nav">
-						<li class="active"><a href="#">Inicio</a></li>
-						<li><a href="#about">Acerca de <strong>rea</strong></a></li>
-						<li><a href="#contact">Contacto</a></li>
+						<li><a href="${createLink(uri: '/')}">Inicio</a></li>
 					</ul>
 					<sec:ifLoggedIn>
 						<p class="navbar-text pull-right">
 							Bienvenido, #<sec:loggedInUserInfo field="username"></sec:loggedInUserInfo>
+							<g:link controller="logout">(Salir)</g:link>
 						</p>
 					</sec:ifLoggedIn>
 				</div>

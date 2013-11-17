@@ -295,12 +295,11 @@ body {
 						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 							class="icon-bar"></span>
 					</button>
-					<a class="brand" href="#">open.rea!</a>
+					<a class="brand" href="/"><i class="icon-unlock"
+						style="color: white;"></i> rea</a>
 					<div class="nav-collapse collapse">
 						<ul class="nav">
 							<li class="active"><a href="#">Inicio</a></li>
-							<li><a href="#about">Sobre REA</a></li>
-							<li><a href="#contact">Contacto</a></li>
 						</ul>
 					</div>
 					<ul class="nav pull-right">

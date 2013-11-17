@@ -9,6 +9,7 @@ class UrlMappings {
 		
 		"/$username/classes/$classname"(controller:'lecture', action:'show')
 		"/$username"(controller:'profile', action:'dashboard')
+		"/dashboard"(controller:'profile', action:'dashboard')
 		"/$username/$action"(controller:'profile')
 
 		"/"(view:"/index")

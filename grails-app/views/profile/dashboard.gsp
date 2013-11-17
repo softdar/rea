@@ -17,6 +17,21 @@
 	<div class="clear"></div>
 
 	<div class="row-fluid">
+		<g:link controller="resource" action="create" params="[type: 'Video']" class="btn btn-large" role="button">
+			<i class="icon icon-facetime-video"></i><br/><small>Nuevo video</small>
+		</g:link>
+		<g:link controller="resource" action="create" params="[type: 'Text']" class="btn btn-large" role="button">
+			<i class="icon icon-pencil"></i><br/><small>Nuevo texto</small>
+		</g:link>
+		<g:link controller="resource" action="create" params="[type: 'Quiz']" class="btn btn-large" role="button">
+			<i class="icon icon-question-sign"></i><br/><small>Nuevo cuestionario</small>
+		</g:link>
+		<g:link controller="resource" action="create" params="[type: 'Quote']" class="btn btn-large" role="button">
+			<i class="icon icon-quote-left"></i><br/><small>Nueva cita</small>
+		</g:link>
+	</div>
+
+	<div class="row-fluid">
 		<legend>Mis recursos</legend>
 		<g:each var="resource" in="${resources}">
 			<div class="well span4">

@@ -9,7 +9,9 @@ class ResourceController {
 	
 	@Secured('IS_AUTHENTICATED_ANONYMOUSLY')
 	def create() {
+		String type = params.type
 		
+		render view: "create${type}"
 	}
 	
 	@Secured('IS_AUTHENTICATED_ANONYMOUSLY')

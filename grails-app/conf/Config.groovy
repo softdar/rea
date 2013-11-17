@@ -96,6 +96,8 @@ grails.plugin.springsecurity.userLookup.userDomainClassName = 'rea.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'rea.UserRole'
 grails.plugin.springsecurity.authority.className = 'rea.Role'
 
+grails.plugin.springsecurity.successHandler.defaultTargetUrl='/dashboard'
+
 grails.plugin.springsecurity.rejectIfNoRule = false
 grails.plugin.springsecurity.fii.rejectPublicInvocations = false
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [
