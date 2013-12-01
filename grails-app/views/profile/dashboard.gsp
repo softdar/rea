@@ -33,11 +33,20 @@
 
 	<div class="row-fluid">
 		<legend>Mis recursos</legend>
-		<g:each var="resource" in="${resources}">
-			<div class="well span4">
-				<legend>${resource.title} <small>${resource.type}</small></legend>
+		<g:form controller="lecture" action="create">
+			<div class="row">
+				<g:each var="resource" in="${resources}">
+					<div class="well span4">
+						<legend>${resource.title} <small>${resource.type}</small></legend>
+						<g:checkBox name="resources" value="${resource.id}" checked="false"/>
+					</div>
+				</g:each>
 			</div>
-		</g:each>
+			<div class="row">
+				<g:submitButton name="Crear clase" class="btn pull-right"/>
+			</div>
+			
+		</g:form>
 	</div>
 
 	<div class="row-fluid">

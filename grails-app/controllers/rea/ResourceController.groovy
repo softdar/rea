@@ -1,7 +1,8 @@
 package rea
 
-import rea.content.VideoContent;
 import grails.plugin.springsecurity.annotation.Secured
+import rea.content.TextContent
+import rea.content.VideoContent
 
 class ResourceController {
 
@@ -22,6 +23,20 @@ class ResourceController {
 			url: url,
 			user: user,
 			title: title)
+		
+		video.save(failOnError: true)
+
+		redirect(controller: 'profile', action: 'dashboard')
+	}
+	
+	@Secured('IS_AUTHENTICATED_ANONYMOUSLY')
+	def createText(String title, String text) {
+
+		def user = springSecurityService.currentUser
+		def video = new TextContent(type: 'text',
+			user: user,
+			title: title,
+			text: text)
 		
 		video.save(failOnError: true)
 

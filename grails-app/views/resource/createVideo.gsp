@@ -1,14 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="layout" content="main"/>
+	<title></title>
 
-<g:form action="createVideo" controller="resource">
+</head>
+<body>
+<div class="page-header">
+	<h2 align="center">Video Explicativo</h2>
+</div>
 
-<g:textField name="title"/>
-<g:textField name="url"/>
-
-el html que hace el formulario para crear videos
-
-el form debería ir al action "createVideo"
-
-
-<g:submitButton name="create" value="crear"/>
-
+<div class="well">
+<g:form action="createVideo" controller="resource" class="form-horizontal" role="form">
+	<br>
+	<div class="control-group">
+		<label class="control-label" for="inputTitulo">Titulo</label>
+		<div class="controls">
+			<g:textField name="title" class="span7" id="inputTitulo" placeholder="Titulo del Video"/>
+		</div>
+	</div>
+	<div class="control-group">
+		<label class="control-label" id="controlURL" for="inputURL">Direccion del video</label>
+		<div class="controls">
+			<g:textField name="url" id="controlURL" class="span7" placeholder="http://www.youtube.com/watch?v=cK-aPU-vRM8"/>
+		</div>
+	</div>
+	<div class="control-group">
+		<div class="controls">
+			<g:submitButton name="create" value="Crear" class="btn btn-primary"/>
+		</div>
+	</div>
 </g:form>
+</div>
+</body>
+</html>
