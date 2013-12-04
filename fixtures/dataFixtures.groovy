@@ -29,7 +29,7 @@ fixture {
 	text(TextContent,
 		title: 'Probabilidad: concepto básico',
 		type: 'text',
-		text: 'La probabilidad mide la frecuencia con la que se obtiene un resultado (o conjunto de resultados) y luego al llevar a cabo un experimento aleatorio, del que se conocen todos los resultados posibles, bajo condiciones suficientemente estables.',
+		text: 'La <b>probabilidad</b> mide la frecuencia con la que se obtiene un resultado (o conjunto de resultados) y luego al llevar a cabo un experimento aleatorio, del que se conocen todos los resultados posibles, bajo condiciones suficientemente estables.',
 		user: delucas
 	)
 

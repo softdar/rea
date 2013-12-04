@@ -1,5 +1,9 @@
 /* INTRO */
 
+.img-circle {
+	width: 150px;
+}
+
 body.intro {
 	padding-top: 0px;
 }
@@ -46,4 +50,9 @@ div.framed div.text {
 
 li.selectable {
 	list-style:none;
+}
+
+.justified {
+	text-align:justify;
+	text-justify:inter-word;
 }

@@ -127,7 +127,7 @@ body {
 .carousel-caption {
 	background-color: transparent;
 	position: static;
-	max-width: 550px;
+	max-width: 585px;
 	padding: 0 20px;
 	margin-top: 200px;
 }
@@ -303,8 +303,8 @@ body {
 						</ul>
 					</div>
 					<ul class="nav pull-right">
-				      <li><g:link controller="login" class="pull-right">Ingresar</g:link></li>
-				    </ul>
+						<li><g:link controller="login" class="pull-right">Ingresar</g:link></li>
+					</ul>
 					<!--/.nav-collapse -->
 				</div>
 				<!-- /.navbar-inner -->
@@ -316,8 +316,6 @@ body {
 	</div>
 	<!-- /.navbar-wrapper -->
 
-
-
 	<!-- Carousel
     ================================================== -->
 	<div id="myCarousel" class="carousel slide">
@@ -326,10 +324,14 @@ body {
 				<img src="${resource(dir: 'img', file: 'carousel-1.jpg')}" alt="">
 				<div class="container">
 					<div class="carousel-caption well">
-						<h1>Apertura</h1>
-						<p class="lead">La condición principal de los recursos
-							educativos abiertos.</p>
-						<a href="#modalVideo" class="btn btn-large btn-primary" data-toggle="modal">Ver video explicativo</a>
+						<h1>Recursos Educativos Abiertos</h1>
+						<p class="lead">Los Recursos Educativos Abiertos son diversos
+							materiales que se utilizan para el aprendizaje, la enseñanza e
+							investigación a los que se accede de modo masiva, fácil, y
+							gratuita. Generalmente pertenecen al Dominio Público, o bien se
+							encuentran bajo una licencia abierta.</p>
+						<a href="#modalVideo" class="btn btn-large btn-primary"
+							data-toggle="modal">Ver video explicativo</a>
 					</div>
 				</div>
 			</div>
@@ -338,9 +340,11 @@ body {
 				<div class="container">
 					<div class="carousel-caption well">
 						<h1>Colaboración</h1>
-						<p class="lead">La principal competencia y motor de la
-							innovación del siglo XXI.</p>
-						<a class="btn btn-large btn-primary" href="#">Learn more</a>
+						<p class="lead">La colaboración resulta ser uno de los dos
+							valores pilares que posee el modelo de código abierto, dado que
+							es la forma en que las comunidades de interés generan distintos
+							productos. La colaboración se convirtió en la principal
+							competencia y motor de innovación del siglo XXI.</p>
 					</div>
 				</div>
 			</div>
@@ -349,9 +353,12 @@ body {
 				<div class="container">
 					<div class="carousel-caption well">
 						<h1>Dominio Publico</h1>
-						<p class="lead">Licencia que permite revisar, reusar, remixar,
-							y redistribuir los recursos educativos abiertos.</p>
-						<a class="btn btn-large btn-primary" href="#">Browse gallery</a>
+						<p class="lead">El Dominio Público es el estado menos
+							restrictivo en el cual pueden encontrarse los Recursos Educativos
+							Abiertos, esto implica que no solo podemos leerlos, editarlos,
+							adaptarlos y compartirlos sino que además no se necesita
+							mencionar su autor. Es por esto que son ideales para el remix
+							digital.</p>
 					</div>
 				</div>
 			</div>
@@ -369,8 +376,11 @@ body {
 			<h3 id="myModalLabel">Recursos Educativos Abiertos</h3>
 		</div>
 		<div class="modal-body">
-			<script type="text/javascript" src="http://s3.amazonaws.com/s3.www.universalsubtitles.org/embed.js">
-			({"video_url": "http://vimeo.com/43456503"})
+			<script type="text/javascript"
+				src="http://s3.amazonaws.com/s3.www.universalsubtitles.org/embed.js">
+				({
+					"video_url" : "http://vimeo.com/43456503"
+				})
 			</script>
 		</div>
 		<div class="modal-footer">
@@ -387,13 +397,17 @@ body {
 		<!-- Three columns of text below the carousel -->
 		<div class="row-fluid">
 			<div class="span4">
-				<img class="img-circle" src="http://placehold.it/140x140">
-				<h2>
-					¿Qué son los <abbr title="Recursos Educativos Abiertos">REA</abbr>?
-				</h2>
-				<p>Lorem ipsum.</p>
+				<img class="img-circle"
+					src="${resource(dir: 'img/landing', file: 'circle_one.gif')}">
+				<h2>Apertura</h2>
+				<p class="justified">La apertura asegura que los REA puedan ser leídos, editados,
+					adaptados y compartidos sin la necesidad de utilizar programas
+					propietarios. Deben pertenecer al Dominio Público, o bien
+					encontrarse bajo una licencia abierta, y su acceso debe ser fácil
+					masivo y gratuito.</p>
 				<p>
-					<a href="#modalREA" role="button" class="btn" data-toggle="modal">Detalles &raquo;</a>
+					<a href="#modalREA" role="button" class="btn pull-right" data-toggle="modal">Detalles
+						&raquo;</a>
 				</p>
 			</div>
 
@@ -405,14 +419,13 @@ body {
 					<h3 id="myModalLabel">Recursos Educativos Abiertos (REA)</h3>
 				</div>
 				<div class="modal-body">
-					<p>La principal ventaja que poseen los REA es su condición de
-						abierto, porque esta apertura permite que alrededor de ellos se
-						generen diversas comunidades de interes en todo el mundo al igual
-						que como en el famoso caso del sistema operativo Linux.</p>
-					<p>Estas comunidades no solo pueden crear de manera
-						colaborativa los REA, sino que sobre todo pueden Revisar, Reusar,
-						Remixar, y Redistribuir miles de REA ya existentes en Internet sin
-						impedimentos legales, sociales, o impedimentos tecnológicos.</p>
+					<p>Según la definición de la UNESCO en el 2012 los Recursos
+						Educativos Abiertos (REA) son: “…materiales de enseñanza,
+						aprendizaje e investigación en cualquier medio, digital o no, que
+						residen en el dominio público o que se han publicado bajo una
+						licencia abierta que permita el acceso sin costo, el uso, la
+						adaptación y redistribución por otros con poca o ninguna
+						restricción”.</p>
 				</div>
 				<div class="modal-footer">
 					<button class="btn" data-dismiss="modal" aria-hidden="true">Volver</button>
@@ -420,11 +433,15 @@ body {
 			</div>
 
 			<div class="span4">
-				<img class="img-circle" src="http://placehold.it/140x140">
+				<img class="img-circle"
+					src="${resource(dir: 'img/landing', file: 'circle_two.png')}">
 				<h2>Movimiento abierto</h2>
-				<p>Lorem ipsum.</p>
+				<p class="justified">El modelo del código abierto está basado en dos valores
+					principales, la apertura de su código y la producción colaborativa
+					de su comunidad. Dichos valores han desembarcado en empresas,
+					gobiernos y las organizaciones educativas no son la excepción.</p>
 				<p>
-					<a href="#modalOpenMovement" role="button" class="btn"
+					<a href="#modalOpenMovement" role="button" class="btn pull-right"
 						data-toggle="modal">Detalles &raquo;</a>
 				</p>
 			</div>
@@ -455,11 +472,15 @@ body {
 			</div>
 
 			<div class="span4">
-				<img class="img-circle" src="http://placehold.it/140x140">
+				<img class="img-circle"
+					src="${resource(dir: 'img/landing', file: 'circle_three.jpg')}">
 				<h2>Dimensiones</h2>
-				<p>Lorem ipsum.</p>
+				<p class="justified">Las licencias Creative Commons son un instrumento legal
+					fundamental para el movimiento abierto ya nos permiten
+					publicar/copiar, darle uso comercial, modificar/adaptar, y cambiar
+					de licencia, solo debemos mencionar al autor del recurso.</p>
 				<p>
-					<a href="#modalDimensions" role="button" class="btn"
+					<a href="#modalDimensions" role="button" class="btn pull-right"
 						data-toggle="modal">Detalles &raquo;</a>
 				</p>
 			</div>

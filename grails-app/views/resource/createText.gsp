@@ -3,7 +3,7 @@
 <head>
 	<meta name="layout" content="main"/>
 	<title></title>
-
+	<resource:richTextEditor type="simple"/>
 </head>
 <body>
 <div class="page-header">
@@ -22,7 +22,8 @@
 	<div class="control-group">
 		<label class="control-label" id="controlURL" for="text">Contenido</label>
 		<div class="controls">
-			<g:textArea name="text" id="text" class="span7" placeholder="Ingrese aquí su texto"></g:textArea>
+<%--			<g:textArea name="text" id="text" class="span7" placeholder="Ingrese aquí su texto"></g:textArea>--%>
+			<richui:richTextEditor name="text" value="" width="525" />
 		</div>
 	</div>
 	<div class="control-group">

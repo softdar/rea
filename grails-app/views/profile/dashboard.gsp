@@ -34,7 +34,7 @@
 	<div class="row-fluid">
 		<legend>Mis recursos</legend>
 		<g:form controller="lecture" action="create">
-			<div class="row">
+			<div class="row-fluid">
 				<g:each var="resource" in="${resources}">
 					<div class="well span4">
 						<legend>${resource.title} <small>${resource.type}</small></legend>
@@ -42,7 +42,7 @@
 					</div>
 				</g:each>
 			</div>
-			<div class="row">
+			<div class="row-fluid">
 				<g:submitButton name="Crear clase" class="btn pull-right"/>
 			</div>
 			
@@ -51,14 +51,16 @@
 
 	<div class="row-fluid">
 		<legend>Mis clases</legend>
-		<g:each var="lecture" in="${lectures}">
-			<div class="well span4">
-				<legend>
-					<g:link controller="${user.username}" action="classes" id="${lecture.name}">${lecture.title}</g:link>
-					<small>contiene ${lecture.contents.size()} recursos</small>
-				</legend>
-			</div>
-		</g:each>
+		<div class="row-fluid">
+			<g:each var="lecture" in="${lectures}">
+				<div class="well span4">
+					<legend>
+						<g:link controller="${user.username}" action="classes" id="${lecture.name}">${lecture.title}</g:link>
+						<small>contiene ${lecture.contents.size()} recursos</small>
+					</legend>
+				</div>
+			</g:each>
+		</div>
 	</div>
 
 
