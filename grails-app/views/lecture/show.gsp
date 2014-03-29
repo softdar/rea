@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 <meta name="layout" content="main" />
@@ -35,7 +36,7 @@
 				<ul class="nav nav-list">
 
 					<g:each in="${content.target.contents}" var="theContent" status="i">
-						<li class="selectable" id="content_${i}"><a href="#content_${i }"> ${theContent.title}
+						<li class="selectable" id="content_${i}"><a href="#content_${i}"> ${theContent.title}
 						</a></li>
 					</g:each>
 

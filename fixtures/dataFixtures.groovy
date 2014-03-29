@@ -4,6 +4,7 @@ import rea.User
 import rea.UserRole
 import rea.content.TextContent
 import rea.content.VideoContent
+import rea.content.ImageContent
 
 fixture {
 
@@ -25,6 +26,14 @@ fixture {
 		url: 'http://www.youtube.com/embed/cGT_YHZ7M7s',
 		user: delucas
 	)
+	
+	image(ImageContent, 
+		title: 'Dados, un juego de probabilidad',
+		type: 'image', 
+		url: 'http://2.bp.blogspot.com/_4nos0c_cvWY/SWlQSvgACPI/AAAAAAAAAEA/ySa4j89yCZ8/s320/PROBABILIDAD.jpg',
+		text: 'Un <b>dado</b> es un objeto de forma poliédrica preparado para mostrar un resultado aleatorio cuando es lanzado sobre una superficie horizontal, desde la mano o mediante un cubilete, en cuyo caso los resultados ocurren con una probabilidad que se distribuye mediante una distribución uniforme discreta.',	
+		user: delucas 
+	)
 
 	text(TextContent,
 		title: 'Probabilidad: concepto básico',
@@ -38,7 +47,7 @@ fixture {
 		title: 'Nociones de probabilidad',
 		brief: 'Esta es una introducción breve a la probabilidad que pretende demostrar cómo funciona la plataforma básica',
 		user: delucas,
-		contents: [video, text]
+		contents: [video, text, image]
 	)
-
 }
+3

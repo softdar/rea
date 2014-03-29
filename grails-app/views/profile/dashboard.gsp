@@ -23,6 +23,9 @@
 		<g:link controller="resource" action="create" params="[type: 'Text']" class="btn btn-large" role="button">
 			<i class="icon icon-pencil"></i><br/><small>Nuevo texto</small>
 		</g:link>
+		<g:link controller="resource" action="create" params="[type: 'Image']" class="btn btn-large" role="button">
+			<i class="icon icon-picture"></i><br/><small>Nueva im&aacute;gen</small>
+		</g:link>
 		<g:link controller="resource" action="create" params="[type: 'Quiz']" class="btn btn-large" role="button">
 			<i class="icon icon-question-sign"></i><br/><small>Nuevo cuestionario</small>
 		</g:link>
