@@ -63,8 +63,8 @@ li.selectable {
   	margin-bottom: 0px;
   	margin-left: 10px;
   	margin-right: 10px;
-    max-width: 400px;
-    max-height: 400px;
+    max-width: 300px;
+    max-height: 300px;
 }
 
 .text-justify {

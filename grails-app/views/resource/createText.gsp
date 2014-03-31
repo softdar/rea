@@ -3,7 +3,7 @@
 <head>
 	<meta name="layout" content="main"/>
 	<title></title>
-	<resource:richTextEditor type="simple"/>
+	<resource:richTextEditor type="simple"/> 
 </head>
 <body>
 <div class="page-header">
@@ -28,7 +28,7 @@
 	</div>
 	<div class="control-group">
 		<div class="controls">
-			<g:submitButton name="create" value="Crear" class="btn btn-primary"/>
+			<g:submitButton name="create" value="Crear" class="btn btn-primary" />
 		</div>
 	</div>
 </g:form>
