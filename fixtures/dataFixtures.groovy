@@ -31,7 +31,7 @@ fixture {
 		title: 'Dados, un juego de probabilidad',
 		type: 'image', 
 		url: 'http://2.bp.blogspot.com/_4nos0c_cvWY/SWlQSvgACPI/AAAAAAAAAEA/ySa4j89yCZ8/s320/PROBABILIDAD.jpg',
-		text: 'Un <b>dado</b> es un objeto de forma poliédrica preparado para mostrar un resultado aleatorio cuando es lanzado sobre una superficie horizontal, desde la mano o mediante un cubilete, en cuyo caso los resultados ocurren con una probabilidad que se distribuye mediante una distribución uniforme discreta.',	
+		text: 'Un dado es un objeto de forma poliédrica preparado para mostrar un resultado aleatorio cuando es lanzado sobre una superficie horizontal, desde la mano o mediante un cubilete, en cuyo caso los resultados ocurren con una probabilidad que se distribuye mediante una distribución uniforme discreta.',	
 		user: delucas 
 	)
 

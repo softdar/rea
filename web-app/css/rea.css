@@ -57,14 +57,15 @@ li.selectable {
 	text-justify:inter-word;
 }
 
-.img-left {
-	float: left;
-	margin-top: 10px;
-  	margin-bottom: 0px;
-  	margin-left: 10px;
-  	margin-right: 10px;
-    max-width: 300px;
-    max-height: 300px;
+/* img.#tooltipImg */
+.custom-img {
+	margin: auto 25%; 
+    max-width: 400px;
+    max-height: 400px;
+}
+
+.custom-link {
+	margin: auto 25%;
 }
 
 .text-justify {
@@ -74,3 +75,4 @@ li.selectable {
 	margin-top: 20px;
 	margin-bottom: 10px;
 }
+

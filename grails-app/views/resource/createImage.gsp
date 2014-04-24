@@ -39,7 +39,7 @@
 					de la im&aacute;gen</label>
 				<div class="controls">
 					<g:textField name="url" id="controlURLInput" class="span6"
-						placeholder="http://2.bp.blogspot.com/_4nos0c_cvWY/SWlQSvgACPI/AAAAAAAAAEA/ySa4j89yCZ8/s320/PROBABILIDAD.jpg" />
+						placeholder="https://farm6.staticflickr.com/5097/5418063084_3ab32ec52f_b.jpg" />
 				</div>
 			</div>
 			<div class="control-group">

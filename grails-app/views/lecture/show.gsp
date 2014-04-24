@@ -87,9 +87,8 @@
 					$("#index").insertAfter($("#main"))
 				}
 			});
-
 		});
-
+		
 	</script>
 
 </body>
