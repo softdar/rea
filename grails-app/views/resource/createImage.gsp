@@ -9,7 +9,7 @@
 			var archivo = document.getElementById("controlURLInput").value;
 			var patronInicial=/^http\:\/\/[a-zA-Z0-9\?\:\=\_\.]+/;
 			var patronFinal=/\.(jpg|gif|png|bmp)$/;
-			if (!(archivo && patronInicial.test(archivo) && patronFinal.test(archivo))) {
+			if (!(archivo || patronInicial.test(archivo) || patronFinal.test(archivo))) {
 		    	//alert('El archivo no es una extensión de imágen valida');
 		    	$('#modal-alert').modal('show');
 		    	return false;

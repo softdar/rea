@@ -2,6 +2,7 @@ package rea
 
 import grails.plugin.springsecurity.annotation.Secured
 import rea.content.ImageContent
+import rea.content.QuizContent
 import rea.content.TextContent
 import rea.content.VideoContent
 
@@ -59,6 +60,25 @@ class ResourceController {
 			title: title)
 		
 		image.save(failOnError: true)
+		
+				redirect(controller: 'profile', action: 'dashboard')
+	}
+	
+	@Secured('IS_AUTHENTICATED_ANONYMOUSLY')
+	def createQuiz(String title, String firstItem, String secondItem, String thirdItem, String validItem) {
+		
+		def user = springSecurityService.currentUser
+		List<Map> options = new ArrayList<>()
+		options.add([number: 0, text: firstItem])
+		options.add([number: 1, text: secondItem])
+		options.add([number: 2, text: thirdItem])
+		def data = [question: title, options: options, answer: validItem]
+		def quiz = new QuizContent(type: 'multiple-choice',
+			data: data,
+			user: user,
+			title: "Cuestionario")
+		
+		quiz.save(failOnError: true)
 		
 				redirect(controller: 'profile', action: 'dashboard')
 	}
