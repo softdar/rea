@@ -2,6 +2,8 @@ package rea
 
 import grails.plugin.springsecurity.annotation.Secured
 import rea.content.ImageContent
+import rea.content.OptionContent
+import rea.content.QuestionContent
 import rea.content.QuizContent
 import rea.content.TextContent
 import rea.content.VideoContent
@@ -49,10 +51,6 @@ class ResourceController {
 	def createImage(String title, String url, String text) {
 		
 		def user = springSecurityService.currentUser
-		//Filtrado de contenido, para caracteres invalidos
-//		def regex = "</?\\w+((\\s+\\w+(\\s*=\\s*(?:\".*?\"|'.*?'|[^\'\">\\s]+))?)+\\s*|\\s*)/?>"
-//		def matcher = text =~ regex;
-//		def result = matcher.replaceAll("")
 		def image = new ImageContent(type: 'image', 
 			url: url,
 			text: text,
@@ -65,21 +63,29 @@ class ResourceController {
 	}
 	
 	@Secured('IS_AUTHENTICATED_ANONYMOUSLY')
-	def createQuiz(String title, String firstItem, String secondItem, String thirdItem, String validItem) {
+	def createQuiz(String question, String firstItem, String secondItem, String thirdItem, Integer validItem) {
 		
 		def user = springSecurityService.currentUser
-		List<Map> options = new ArrayList<>()
-		options.add([number: 0, text: firstItem])
-		options.add([number: 1, text: secondItem])
-		options.add([number: 2, text: thirdItem])
-		def data = [question: title, options: options, answer: validItem]
-		def quiz = new QuizContent(type: 'multiple-choice',
-			data: data,
-			user: user,
-			title: "Cuestionario")
+		
+		def options = [
+				new OptionContent(number: 0, text: firstItem),
+				new OptionContent(number: 1, text: secondItem),
+				new OptionContent(number: 2, text: thirdItem)
+			]
+		
+		options.each {
+			it.save()
+		}
+		
+		// For now, it's just one
+		def theQuestion = new QuestionContent(options: options, validOption: validItem, question: question)
+		
+		theQuestion.save()
+		
+		def quiz = new QuizContent(questions: [theQuestion], title: 'Lala', type: 'multiple-choice', user: user)
 		
 		quiz.save(failOnError: true)
 		
-				redirect(controller: 'profile', action: 'dashboard')
+		redirect(controller: 'profile', action: 'dashboard')
 	}
 }

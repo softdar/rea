@@ -19,7 +19,7 @@
 </head>
 <body>
 	<div class="page-header">
-		<h2 align="center">Im&aacute;gen Ejemplo</h2>
+		<h2 align="center">Imagen</h2>
 	</div>
 
 	<div class="well">
@@ -46,8 +46,7 @@
 				<label class="control-label" id="controlText" for="text">Descripci&oacute;n
 					de la im&aacute;gen</label>
 				<div class="controls">
-					<%--			<g:textArea name="text" id="text" class="span7" placeholder="Ingrese aquí su texto"></g:textArea>--%>
-					<richui:richTextEditor name="text" value="" width="570" />
+					<g:textArea name="text" id="text" class="span7" placeholder="Ingrese aquí su epígrafe"></g:textArea>
 				</div>
 			</div>
 			<div class="control-group">

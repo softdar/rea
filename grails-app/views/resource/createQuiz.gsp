@@ -14,7 +14,7 @@
 				<div class="control-group">
 					<label class="control-label" for="inputTitulo">Pregunta</label>
 					<div class="controls">
-						<g:textField name="title" class="span7" id="inputTitulo"
+						<g:textField name="question" class="span7" id="inputTitulo"
 							placeholder="¿Cuál es tu pregunta?" />
 					</div>
 				</div>

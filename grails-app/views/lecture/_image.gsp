@@ -1,3 +1,24 @@
+<div id="content_${i}">
+	<h3>
+		${theContent.title}
+	</h3>
+	<div class="row-fluid">
+		<img src="${theContent.url}" class="custom-img" alt=""
+			id="tooltipImg" title="${theContent.title}" />
+	</div>
+	<div class="custom-link">
+		<a id="linkTooltip" class="pull-right" data-placement="right" href="${theContent.url}"
+			data-toggle="tooltip" title="Página original de la imagen">
+			<i class="icon-external-link"></i>
+			Enlace a la imagen original
+		</a>
+		<div class="clear"></div>
+	</div>
+	<blockquote>
+		${theContent.text}
+	</blockquote>
+</div>
+
 <script type="text/javascript">
 	function enableTootip() {
 		$(function () {
@@ -21,18 +42,3 @@
 		});
 	}
 </script>
-
-<div id="content_${i}">
-	<h3>
-		${theContent.title}
-	</h3>
-	<img src="${theContent.url}" class="img-rounded custom-img" alt=""
-		id="tooltipImg" title="${theContent.text}" />
-	<br>
-	<div class="custom-link">
-		<a id="linkTooltip" data-placement="right" href="${theContent.url}"
-			data-toggle="tooltip" title="Página original de la imágen" onMouseOver="enableTootip()"
-			onMouseOut="disableTootip()">link a página</a><br>
-	</div>
-</div>
-

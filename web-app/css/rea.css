@@ -1,5 +1,9 @@
 /* INTRO */
 
+.clear {
+	clear: both;
+}
+
 .img-circle {
 	width: 150px;
 }
@@ -61,11 +65,11 @@ li.selectable {
 .custom-img {
 	margin: auto 25%; 
     max-width: 400px;
-    max-height: 400px;
+    max-height: 300px;
 }
 
 .custom-link {
-	margin: auto 25%;
+	padding: 5px;
 }
 
 .text-justify {

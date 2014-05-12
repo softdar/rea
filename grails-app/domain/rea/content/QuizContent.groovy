@@ -1,15 +1,11 @@
 package rea.content
 
 class QuizContent extends Content {
-	List<Option> data = []
-	String question
-	Integer validOption
+
+	List questions = []
+	
+	static hasMany = [questions: QuestionContent]
 	
 	static constraints = {
 	}
-}
-
-class Option {
-	Integer number
-	String text
 }
