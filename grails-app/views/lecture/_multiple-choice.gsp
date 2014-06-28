@@ -45,9 +45,11 @@
 									if ($("input[name=question_${j}]:checked").val() == ${q.validOption}) {
 										$("#myModalLabel_${j}").html('¡Yeah!')
 										$("#myModalButton_${j}").html('¡Genial!')
+										$("#myParagraph_${j}").html('${q.encourage}')
 									} else {
 										$("#myModalLabel_${j}").html('Ouch...')
 										$("#myModalButton_${j}").html('Intentarlo nuevamente')
+										$("#myParagraph_${j}").html('${q.hint}')
 									}
 								})
 							});
@@ -62,7 +64,7 @@
 								<h3 id="myModalLabel_${j}">-</h3>
 							</div>
 							<div class="modal-body">
-								<p>Aquí estaría bueno poner más info</p>
+								<p id="myParagraph_${j}"></p>
 							</div>
 							<div class="modal-footer">
 								<button class="btn" data-dismiss="modal" aria-hidden="true" id="myModalButton_${j}">-</button>

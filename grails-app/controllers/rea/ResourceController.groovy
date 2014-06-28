@@ -63,7 +63,10 @@ class ResourceController {
 	}
 	
 	@Secured('IS_AUTHENTICATED_ANONYMOUSLY')
-	def createQuiz(String question, String firstItem, String secondItem, String thirdItem, Integer validItem) {
+	def createQuiz( String title, String question, String firstItem,
+			String secondItem, String thirdItem,
+			Integer validItem, String hint,
+			String encourage) {
 		
 		def user = springSecurityService.currentUser
 		
@@ -78,11 +81,18 @@ class ResourceController {
 		}
 		
 		// For now, it's just one
-		def theQuestion = new QuestionContent(options: options, validOption: validItem, question: question)
+		def theQuestion = new QuestionContent(options: options, 
+											  validOption: validItem, 
+											  question: question, 
+											  hint: hint,
+											  encourage: encourage)
 		
 		theQuestion.save()
 		
-		def quiz = new QuizContent(questions: [theQuestion], title: 'Lala', type: 'multiple-choice', user: user)
+		def quiz = new QuizContent( questions: [theQuestion], 
+									title: title, 
+									type: 'multiple-choice', 
+									user: user)
 		
 		quiz.save(failOnError: true)
 		
