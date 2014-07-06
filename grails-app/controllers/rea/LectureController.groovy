@@ -25,8 +25,21 @@ class LectureController {
 		}
 	}
 	
+	// preparar los recursos a mostrar
 	@Secured('IS_AUTHENTICATED_ANONYMOUSLY')
-	def create() {
+	def preCreate() {
+		
+		def user = springSecurityService.currentUser
+		def contents = []
+		
+		params.resources.each { contents << Content.get(it as Long) }
+		Long resourcesCantity = contents.size()
+
+		render view: 'customize_class', model: [resources: contents, cantity: resourcesCantity]
+	}
+	
+	@Secured('IS_AUTHENTICATED_ANONYMOUSLY')
+	def create(String title, String brief) {
 		
 		def contents = [] 
 		params.resources.each { contents << Content.get(it as Long) } 
@@ -34,8 +47,8 @@ class LectureController {
 		def user = springSecurityService.currentUser
 		def lecture = new Lecture(
 			name: 'test' + (new Random()).nextInt(Integer.MAX_VALUE),
-			title: 'test title',
-			brief: 'test brief',
+			title: title,
+			brief: brief,
 			user: user,
 			contents: contents)
 		

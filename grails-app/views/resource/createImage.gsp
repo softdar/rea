@@ -23,8 +23,7 @@
 	</div>
 
 	<div class="well">
-		<g:form action="createImage" controller="resource"
-			class="form-horizontal" role="form"
+		<g:form action="createImage" controller="resource" class="form-horizontal" role="form"
 			onsubmit="return validateExtension()">
 			<br>
 			<div class="control-group">

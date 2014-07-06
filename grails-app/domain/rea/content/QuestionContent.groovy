@@ -4,8 +4,8 @@ class QuestionContent {
 
 	String question
 	Integer validOption 
-	String hint // texto cuando se pone mal la respuesta
-	String encourage // aliento de respuesta
+	String hint
+	String encourage
 	List options = []
 	
 	static hasMany = [options: OptionContent]

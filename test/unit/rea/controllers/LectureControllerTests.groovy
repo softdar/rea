@@ -1,9 +1,10 @@
 package rea.controllers
 
-import rea.Lecture
+import rea.Lecture	
 import rea.LectureController
 import rea.LectureService
 import rea.User
+import grails.test.mixin.*
 
 
 @TestFor(LectureController)

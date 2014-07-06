@@ -36,7 +36,7 @@
 
 	<div class="row-fluid">
 		<legend>Mis recursos</legend>
-		<g:form controller="lecture" action="create">
+		<g:form controller="lecture" action="preCreate">
 			<div class="row-fluid">
 				<g:each var="resource" in="${resources}">
 					<div class="well span4">
