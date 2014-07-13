@@ -30,30 +30,14 @@
 
 			<legend>Ordenar recursos</legend>
 			<div class="row-fluid">
+			<ol class="sortable">
 				<g:each var="resource" in="${resources}">
-					<div class="well span4">
-						<legend>${resource.title}
-							<small>${resource.type}</small>
-						</legend>
-						<%--						<g:checkBox name="resources" value="${resource.id}" checked="false"/>--%>
-						<select name="resources">
-							<g:set var="i" value="${1}" />
-							<g:while test="${i <= cantity}">
-								<g:if test="${i == resource.id}">
-									<option value="${resource.id}" selected>
-										${resource.id}
-									</option>
-								</g:if>
-								<g:else>
-									<<option value="${i}">
-										${i}
-									</option>
-								</g:else>
-								${i++}
-							</g:while>
-						</select>
-					</div>
+					<li>
+						${resource.title} (<small>${resource.type}</small>)
+						<g:hiddenField name="resources" value="${resource.id}"/>
+					</li>
 				</g:each>
+			</ol>
 			</div>
 			<div class="row-fluid">
 				<div class="span1">
@@ -66,5 +50,12 @@
 			</div>
 		</g:form>
 	</div>
+	
+	<g:javascript library="sortable" />
+	<script type="text/javascript">
+		$(function(){
+			$(".sortable").sortable();
+		});
+	</script>
 </body>
 </html>

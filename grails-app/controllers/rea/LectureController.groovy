@@ -41,7 +41,8 @@ class LectureController {
 	@Secured('IS_AUTHENTICATED_ANONYMOUSLY')
 	def create(String title, String brief) {
 		
-		def contents = [] 
+		def contents = []
+		
 		params.resources.each { contents << Content.get(it as Long) } 
 		
 		def user = springSecurityService.currentUser
