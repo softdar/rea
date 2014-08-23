@@ -13,8 +13,15 @@ hibernate {
 environments {
 	development {
 		dataSource {
-			dbCreate = "create" // one of 'create', 'create-drop', 'update', 'validate', ''
-			url = "jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000"
+			dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
+			driverClassName = "org.postgresql.Driver"
+			dialect = org.hibernate.dialect.PostgreSQLDialect
+
+			uri = new URI("postgres://openclassroom:openclassroom@localhost:5432/rea_development")
+
+			url = "jdbc:postgresql://${uri.host}:${uri.port}${uri.path}"
+			username = uri.userInfo.split(":")[0]
+			password = uri.userInfo.split(":")[1]
 		}
 	}
 	test {
@@ -25,7 +32,7 @@ environments {
 	}
 	production {
 		dataSource {
-			dbCreate = "update"
+			dbCreate = "validate"
 			driverClassName = "org.postgresql.Driver"
 			dialect = org.hibernate.dialect.PostgreSQLDialect
 

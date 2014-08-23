@@ -13,11 +13,20 @@ fixture {
 		password: 'password'
 	)
 	
+	hernan(User,
+		username: 'mavromou',
+		password: 'seguridad'
+	)
+
 	teacher(Role,
 		authority: 'ROLE_TEACHER')
 	
 	delucasTeacher(UserRole,
 		user: delucas,
+		role: teacher)
+
+	hernanTeacher(UserRole,
+		user: hernan,
 		role: teacher)
 	
 	video(VideoContent,

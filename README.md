@@ -7,6 +7,12 @@ Proyecto para la apertura de recursos educativos de la Universidad Nacional de L
 * [![Build Status](https://travis-ci.org/delucas/rea.png?branch=master)](https://travis-ci.org/delucas/rea) - [master](https://github.com/delucas/rea)
 * [![Build Status](https://travis-ci.org/delucas/rea.png?branch=development)](https://travis-ci.org/delucas/rea) - [development](https://github.com/delucas/rea/tree/development)
 
+## Setup inicial
+
+    $ sudo -u postgres createuser openclassroom
+    $ sudo -u postgres psql --command "ALTER USER openclassroom WITH PASSWORD 'your password';"
+    $ sudo -u postgres createdb --owner openclassroom rea_development
+
 ## Cómo colaborar
 
 Luego de hacer un **fork**,
