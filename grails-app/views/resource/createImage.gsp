@@ -6,11 +6,10 @@
 	<resource:richTextEditor type="simple"/>
 	<script type="text/javascript">
 		function validateExtension() {
-			var archivo = document.getElementById("controlURLInput").value;
-			var patronInicial=/^http\:\/\/[a-zA-Z0-9\?\:\=\_\.]+/;
-			var patronFinal=/\.(jpg|gif|png|bmp)$/;
-			if (!(archivo || patronInicial.test(archivo) || patronFinal.test(archivo))) {
-		    	//alert('El archivo no es una extensión de imágen valida');
+			var file = document.getElementById("controlURLInput").value;
+			var initialPattern = /^http\:\/\/[a-zA-Z0-9\?\:\=\_\.]+/;
+			var finalPattern = /\.(jpg|gif|png|bmp)$/;
+			if (!(file || initialPattern.test(file) || finalPattern.test(file))) {
 		    	$('#modal-alert').modal('show');
 		    	return false;
 			}
@@ -27,7 +26,7 @@
 			onsubmit="return validateExtension()">
 			<br>
 			<div class="control-group">
-				<label class="control-label" for="inputTitulo">Titulo</label>
+				<label class="control-label" for="inputTitulo">Título</label>
 				<div class="controls">
 					<g:textField name="title" class="span6" id="inputTitulo"
 						placeholder="Titulo de la imágen" />
@@ -51,6 +50,7 @@
 			<div class="control-group">
 				<div class="controls">
 					<g:submitButton name="create" value="Crear" class="btn btn-primary" />
+					<g:link controller="profile" action="dashboard" class="btn btn-primary">Cancelar</g:link>
 				</div>
 			</div>
 		</g:form>

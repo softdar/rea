@@ -1,8 +1,7 @@
 package rea.controllers
 
-import grails.test.mixin.*
-
-import org.junit.*
+import grails.test.mixin.TestFor
+import grails.test.mixin.Mock
 
 import rea.Lecture
 import rea.ProfileController

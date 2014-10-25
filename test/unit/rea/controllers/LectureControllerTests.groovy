@@ -4,7 +4,8 @@ import rea.Lecture
 import rea.LectureController
 import rea.LectureService
 import rea.User
-import grails.test.mixin.*
+import grails.test.mixin.TestFor
+import grails.test.mixin.Mock
 
 
 @TestFor(LectureController)

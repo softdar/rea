@@ -46,7 +46,6 @@
 				<div class="span2">
 					<g:link controller="profile" action="dashboard" class="btn">Cancelar</g:link>
 				</div>
-
 			</div>
 		</g:form>
 	</div>

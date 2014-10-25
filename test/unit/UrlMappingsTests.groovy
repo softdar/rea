@@ -1,8 +1,9 @@
-import grails.test.mixin.*
 import rea.LectureController
 import rea.ProfileController
+import grails.test.mixin.Mock
+import grails.test.mixin.TestFor
 
-@TestFor(UrlMappings)	
+@TestFor(UrlMappings)
 @Mock([LectureController, ProfileController])
 class UrlMappingsTests {
 	
