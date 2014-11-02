@@ -41,6 +41,7 @@
 				<g:each var="resource" in="${resources}">
 					<div class="well span4">
 						<legend>${resource.title} <small>${resource.type}</small></legend>
+						<g:render template="${resource.type}" model="[resource: resource, i: i]"></g:render>
 						<g:checkBox name="resources" value="${resource.id}" checked="false"/>
 					</div>
 				</g:each>
@@ -58,9 +59,10 @@
 			<g:each var="lecture" in="${lectures}">
 				<div class="well span4">
 					<legend>
-						<g:link controller="${user.username}" action="classes" id="${lecture.name}">${lecture.title}</g:link>
+						<g:link controller="${user.username}" action="classes" id="${lecture.name}">${lecture.title}</g:link><br>
 						<small>contiene ${lecture.contents.size()} recursos</small>
 					</legend>
+					<g:render template="customize_class" model="[resources: lecture.contents]"></g:render>
 				</div>
 			</g:each>
 		</div>

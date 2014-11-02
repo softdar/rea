@@ -1,8 +1,8 @@
 package rea.domain
-import grails.test.mixin.*
 import rea.User
 import rea.content.Content
-
+import grails.test.mixin.Mock
+import grails.test.mixin.TestFor
 
 /**
  * See the API for {@link grails.test.mixin.domain.DomainClassUnitTestMixin} for usage instructions

@@ -57,17 +57,17 @@
 	<script>
 
 		function resizeVideoIframes() {
-			theContainer = $("#theContent").parent()
-			iframe = $("iframe")
+			theContainer = $("#theContent").parent();
+			iframe = $("iframe");
 
-			iframe.height(theContainer.height() - 60)
-			iframe.width(theContainer.width())
+			iframe.height(theContainer.height() - 60);
+			iframe.width(theContainer.width());
 		}
 
 		$(function() {
 
 			$(window).on('resize', function() {
-				resizeVideoIframes()
+				resizeVideoIframes();
 			});
 
 			$(".selectable").on('click', function(e) {

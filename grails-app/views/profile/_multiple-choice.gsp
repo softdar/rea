@@ -1,0 +1,1 @@
+<g:link controller="resource" action="create" params="[type: 'Quiz']" class="btn btn-primary">Editar</g:link>
