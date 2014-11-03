@@ -398,7 +398,7 @@ body {
 		<div class="row-fluid">
 			<div class="span4">
 				<img class="img-circle"
-					src="${resource(dir: 'img/landing', file: 'circle_one.gif')}">
+					src="${resource(dir: 'img/landing', file: 'circle_three.jpg')}">
 				<h2>Apertura</h2>
 				<p class="justified">La apertura asegura que los REA puedan ser leídos, editados,
 					adaptados y compartidos sin la necesidad de utilizar programas
@@ -473,7 +473,7 @@ body {
 
 			<div class="span4">
 				<img class="img-circle"
-					src="${resource(dir: 'img/landing', file: 'circle_three.jpg')}">
+					src="${resource(dir: 'img/landing', file: 'circle_one.gif')}">
 				<h2>Dimensiones</h2>
 				<p class="justified">Las licencias Creative Commons son un instrumento legal
 					fundamental para el movimiento abierto ya nos permiten
