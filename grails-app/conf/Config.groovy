@@ -97,6 +97,7 @@ log4j = {
 grails.plugin.springsecurity.userLookup.userDomainClassName = 'rea.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'rea.UserRole'
 grails.plugin.springsecurity.authority.className = 'rea.Role'
+grails.plugin.springsecurity.logout.postOnly = false
 
 grails.plugin.springsecurity.successHandler.defaultTargetUrl='/dashboard'
 
