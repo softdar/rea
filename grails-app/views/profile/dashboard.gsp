@@ -70,9 +70,19 @@
 										${resource.title}
 										<small> ${resource.type}, por ${resource.user.username}
 										</small>
-										<g:link controller="resource" action="edit"
-											params="[type: resource.type]"
-											class="btn btn-primary pull-right" disabled="disabled">Editar</g:link>
+										<div class="btn-group pull-right">
+											<g:link controller="resource" action="edit"
+												params="[type: resource.type]"
+												class="btn btn-primary" disabled="disabled">
+												<i class="icon-edit"></i>
+												Editar
+											</g:link>
+											<g:link controller="resource" action="delete" id="${resource.id}"
+												class="btn btn-danger">
+												<i class="icon-remove"></i>
+												Eliminar
+											</g:link>
+										</div>
 									</legend>
 								</div>
 								<div class="row-fluid">

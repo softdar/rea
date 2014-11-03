@@ -4,7 +4,8 @@
 			${theContent.title}
 			<small>por ${theContent.user.username}</small>
 		</h3>
-		<iframe src="${theContent.url}" frameborder="0"
-			allowfullscreen></iframe>
+		<iframe
+			src="http://www.youtube.com/embed/${resource.url.split('/').last()}"
+			frameborder="0" allowfullscreen></iframe>
 	</div>
 </div>

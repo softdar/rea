@@ -1,6 +1,7 @@
 package rea
 
 import grails.plugin.springsecurity.annotation.Secured
+import rea.content.Content
 import rea.content.ImageContent
 import rea.content.OptionContent
 import rea.content.QuestionContent
@@ -11,6 +12,14 @@ import rea.content.VideoContent
 class ResourceController {
 
 	def springSecurityService
+	
+	@Secured('IS_AUTHENTICATED_ANONYMOUSLY')
+	def delete(Long id) {
+		Content remove = Content.get(id)
+		remove.delete()
+		
+		redirect controller: 'profile', action: 'dashboard'
+	}
 	
 	@Secured('IS_AUTHENTICATED_ANONYMOUSLY')
 	def create() {
