@@ -60,6 +60,7 @@
 			<div class="control-group">
 				<div class="controls">
 					<g:submitButton name="create" value="Crear" class="btn btn-primary" />
+					<g:link controller="profile" action="dashboard" class="btn btn-primary">Cancelar</g:link>
 				</div>
 			</div>
 		</g:form>

@@ -1,4 +1,4 @@
-/* INTRO */
+height="100%"/* INTRO */
 
 .clear {
 	clear: both;
@@ -98,4 +98,7 @@ ol.example li.placeholder {
 ol.example li.placeholder:before {
   position: absolute;
   /** Define arrowhead **/
+}
+
+.custom-img-dash {
 }
