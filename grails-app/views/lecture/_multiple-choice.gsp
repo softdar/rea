@@ -4,6 +4,7 @@
 	<div>
 		<h3>
 			${theContent.title}
+			<small>por ${theContent.user.username}</small>
 		</h3>
 
 

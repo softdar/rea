@@ -68,7 +68,7 @@
 										<g:checkBox name="resources" value="${resource.id}"
 											checked="false" />
 										${resource.title}
-										<small> ${resource.type}
+										<small> ${resource.type}, por ${resource.user.username}
 										</small>
 										<g:link controller="resource" action="edit"
 											params="[type: resource.type]"
