@@ -9,7 +9,7 @@ class LectureController {
 
 	def lectureService
 	def springSecurityService
-
+	
 	@Secured('IS_AUTHENTICATED_ANONYMOUSLY')
 	def show() {
 
@@ -39,7 +39,7 @@ class LectureController {
 	}
 	
 	@Secured('IS_AUTHENTICATED_ANONYMOUSLY')
-	def create(String title, String brief) {
+	def create(String title, String brief, String name) {
 		
 		def contents = []
 		
@@ -47,7 +47,7 @@ class LectureController {
 		
 		def user = springSecurityService.currentUser
 		def lecture = new Lecture(
-			name: 'test' + (new Random()).nextInt(Integer.MAX_VALUE),
+			name: name.replace(' ', '-'),
 			title: title,
 			brief: brief,
 			user: user,

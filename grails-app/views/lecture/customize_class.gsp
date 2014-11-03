@@ -20,6 +20,14 @@
 						placeholder="Titulo del Texto" />
 				</div>
 			</div>
+			
+			<div class="control-group">
+				<label class="control-label" for="inputName">Titulo corto</label>
+				<div class="controls">
+					<g:textField name="name" class="span7" id="inputName"
+						placeholder="Titulo Corto Sin Espacios" />
+				</div>
+			</div>
 
 			<div class="control-group">
 				<label class="control-label" id="controlBrief" for="text">Descripción de la Clase</label>
@@ -41,7 +49,7 @@
 			</div>
 			<div class="row-fluid">
 				<div class="span1">
-					<g:submitButton name="Aceptar" class="btn" />
+					<g:submitButton name="Aceptar" class="btn btn-primary" />
 				</div>
 				<div class="span2">
 					<g:link controller="profile" action="dashboard" class="btn">Cancelar</g:link>
