@@ -8,7 +8,7 @@ import grails.test.mixin.TestFor
 class UrlMappingsTests {
 	
 	void testLectureUrl() {
-		assertForwardUrlMapping("/delucas/classes/probabilidad", controller: 'lecture', action: 'show') {
+		assertForwardUrlMapping("/delucas/clases/probabilidad", controller: 'lecture', action: 'show') {
 			username = 'delucas'
 			classname = 'probabilidad'
 		}

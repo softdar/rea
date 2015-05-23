@@ -104,7 +104,7 @@
 					<div class="row-fluid">
 						<div class="well span12">
 							<legend>
-								<g:link controller="${user.username}" action="classes"
+								<g:link controller="${user.username}" action="clases"
 									id="${lecture.name}">${lecture.title}</g:link>
 								<small>contiene ${lecture.contents.size()} recursos
 								</small>
