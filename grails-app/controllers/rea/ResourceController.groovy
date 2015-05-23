@@ -13,14 +13,15 @@ class ResourceController {
 
 	def springSecurityService
 	
-	@Secured('ROLE_TEACHER')
-	def delete(Long id) {
-		// chequear que solo son contenidos del usuario actual
-		Content remove = Content.get(id)
-		remove.delete()
-		
-		redirect controller: 'profile', action: 'dashboard'
-	}
+//	@Secured('ROLE_TEACHER')
+//	// XXX: bogus
+//	def delete(Long id) {
+//		// chequear que solo son contenidos del usuario actual
+//		Content remove = Content.get(id)
+//		remove.delete()
+//		
+//		redirect controller: 'profile', action: 'dashboard'
+//	}
 	
 	@Secured('ROLE_TEACHER')
 	def create() {

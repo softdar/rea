@@ -73,11 +73,13 @@
 												Editar
 											</button>
 <%--											</g:link>--%>
-											<g:link controller="resource" action="delete" id="${resource.id}"
-												class="btn btn-danger">
+<%--											<g:link controller="resource" action="delete" id="${resource.id}"--%>
+<%--												class="btn btn-danger">--%>
+											<button class="btn btn-danger" disabled="disabled">
 												<i class="icon-remove"></i>
 												Eliminar
-											</g:link>
+											</button>
+<%--											</g:link>--%>
 										</div>
 									</legend>
 								</div>
