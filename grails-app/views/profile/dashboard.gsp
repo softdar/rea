@@ -41,12 +41,6 @@
 				<br />
 				<small>Nuevo cuestionario</small>
 			</g:link>
-			<g:link controller="resource" action="create"
-				params="[type: 'Quote']" class="btn btn-large" role="button">
-				<i class="icon icon-quote-left"></i>
-				<br />
-				<small>Nueva cita</small>
-			</g:link>
 		</div>
 	</div>
 

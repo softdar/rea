@@ -26,7 +26,7 @@ class LectureController {
 	}
 	
 	// preparar los recursos a mostrar
-	@Secured('IS_AUTHENTICATED_ANONYMOUSLY')
+	@Secured('ROLE_TEACHER')
 	def preCreate() {
 		
 		def user = springSecurityService.currentUser
@@ -38,7 +38,7 @@ class LectureController {
 		render view: 'customize_class', model: [resources: contents, cantity: resourcesCantity]
 	}
 	
-	@Secured('IS_AUTHENTICATED_ANONYMOUSLY')
+	@Secured('ROLE_TEACHER')
 	def create(String title, String brief, String name) {
 		
 		def contents = []

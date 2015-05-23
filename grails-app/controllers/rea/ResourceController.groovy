@@ -13,22 +13,23 @@ class ResourceController {
 
 	def springSecurityService
 	
-	@Secured('IS_AUTHENTICATED_ANONYMOUSLY')
+	@Secured('ROLE_TEACHER')
 	def delete(Long id) {
+		// chequear que solo son contenidos del usuario actual
 		Content remove = Content.get(id)
 		remove.delete()
 		
 		redirect controller: 'profile', action: 'dashboard'
 	}
 	
-	@Secured('IS_AUTHENTICATED_ANONYMOUSLY')
+	@Secured('ROLE_TEACHER')
 	def create() {
 		String type = params.type
 		
 		render view: "create${type}"
 	}
 	
-	@Secured('IS_AUTHENTICATED_ANONYMOUSLY')
+	@Secured('ROLE_TEACHER')
 	def createVideo(String title, String url) {
 
 		def user = springSecurityService.currentUser
@@ -42,7 +43,7 @@ class ResourceController {
 		redirect(controller: 'profile', action: 'dashboard')
 	}
 	
-	@Secured('IS_AUTHENTICATED_ANONYMOUSLY')
+	@Secured('ROLE_TEACHER')
 	def createText(String title, String text) {
 
 		def user = springSecurityService.currentUser
@@ -56,7 +57,7 @@ class ResourceController {
 		redirect(controller: 'profile', action: 'dashboard')
 	}
 	
-	@Secured('IS_AUTHENTICATED_ANONYMOUSLY')
+	@Secured('ROLE_TEACHER')
 	def createImage(String title, String url, String text) {
 		
 		def user = springSecurityService.currentUser
@@ -71,7 +72,7 @@ class ResourceController {
 				redirect(controller: 'profile', action: 'dashboard')
 	}
 	
-	@Secured('IS_AUTHENTICATED_ANONYMOUSLY')
+	@Secured('ROLE_TEACHER')
 	def createQuiz( String title, String question, String firstItem,
 			String secondItem, String thirdItem,
 			Integer validItem, String hint,

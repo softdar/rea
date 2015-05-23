@@ -295,13 +295,8 @@ body {
 						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
 							class="icon-bar"></span>
 					</button>
-					<a class="brand" href="/"><i class="icon-unlock"
+					<a class="brand" href="${createLink(uri: '/')}"><i class="icon-unlock"
 						style="color: white;"></i> rea</a>
-					<div class="nav-collapse collapse">
-						<ul class="nav">
-							<li class="active"><a href="#">Inicio</a></li>
-						</ul>
-					</div>
 					<ul class="nav pull-right">
 						<li><g:link controller="login" class="pull-right">Ingresar</g:link></li>
 					</ul>

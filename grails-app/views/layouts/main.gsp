@@ -50,7 +50,13 @@
 					style="color: white;"></i> rea</a>
 				<div class="nav-collapse collapse">
 					<ul class="nav">
-						<li><a href="${createLink(uri: '/')}">Inicio</a></li>
+						<li>
+							<sec:ifLoggedIn>
+								<g:link controller="profile" action="dashboard">
+									Escritorio
+								</g:link>
+							</sec:ifLoggedIn>
+						</li>
 					</ul>
 					<sec:ifLoggedIn>
 						<p class="navbar-text pull-right">
