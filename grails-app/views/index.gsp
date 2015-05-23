@@ -297,6 +297,19 @@ body {
 					</button>
 					<a class="brand" href="${createLink(uri: '/')}"><i class="icon-unlock"
 						style="color: white;"></i> rea</a>
+						
+						
+				<div class="nav-collapse collapse">
+					<ul class="nav">
+						<li>
+								<g:link controller="lecture" action="list">
+									Repositorio de clases
+								</g:link>
+						</li>
+					</ul>
+				</div>
+						
+						
 					<ul class="nav pull-right">
 						<li><g:link controller="login" class="pull-right">Ingresar</g:link></li>
 					</ul>

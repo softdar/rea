@@ -65,12 +65,14 @@
 										<small> ${resource.type}, por ${resource.user.username}
 										</small>
 										<div class="btn-group pull-right">
-											<g:link controller="resource" action="edit"
-												params="[type: resource.type]"
-												class="btn btn-primary" disabled="disabled">
+<%--											<g:link controller="resource" action="edit"--%>
+<%--												params="[type: resource.type]"--%>
+<%--												class="btn btn-primary" disabled="disabled">--%>
+											<button class="btn btn-primary" disabled="disabled">
 												<i class="icon-edit"></i>
 												Editar
-											</g:link>
+											</button>
+<%--											</g:link>--%>
 											<g:link controller="resource" action="delete" id="${resource.id}"
 												class="btn btn-danger">
 												<i class="icon-remove"></i>
@@ -101,10 +103,7 @@
 						<div class="well span12">
 							<legend>
 								<g:link controller="${user.username}" action="classes"
-									id="${lecture.name}">
-									${lecture.title}
-								</g:link>
-								&nbsp;
+									id="${lecture.name}">${lecture.title}</g:link>
 								<small>contiene ${lecture.contents.size()} recursos
 								</small>
 							</legend>

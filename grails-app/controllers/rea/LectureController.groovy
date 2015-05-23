@@ -11,6 +11,11 @@ class LectureController {
 	def springSecurityService
 	
 	@Secured('IS_AUTHENTICATED_ANONYMOUSLY')
+	def list() {
+		[clases: Lecture.list()]
+	}
+	
+	@Secured('IS_AUTHENTICATED_ANONYMOUSLY')
 	def show() {
 
 		String username = params['username']

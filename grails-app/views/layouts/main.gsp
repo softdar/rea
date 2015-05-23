@@ -57,6 +57,11 @@
 								</g:link>
 							</sec:ifLoggedIn>
 						</li>
+						<li>
+								<g:link controller="lecture" action="list">
+									Repositorio de clases
+								</g:link>
+						</li>
 					</ul>
 					<sec:ifLoggedIn>
 						<p class="navbar-text pull-right">
