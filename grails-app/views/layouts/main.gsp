@@ -35,6 +35,29 @@
 <r:require modules="font-awesome" />
 <r:layoutResources />
 
+<script type="text/javascript">
+		function validatePassword() {
+			var pwdOne = $('#newPassword').val();
+			var pwdTwo = $('#passConfirmed').val();
+			if(pwdOne !== pwdTwo || pwdOne == '' || pwdTwo == '') {
+				showAlert();
+				$('#newPassword').val('');
+				$('#passConfirmed').val('');
+				return false;
+			} else {
+				$("#editPassModal").modal('hide');
+			}
+		}
+
+		function showAlert() {
+			var alert = "<div id='errorPassword' class='alert alert-block alert-error fade in'>";
+			alert += "<h4 class='alert-heading'>Ouch! Error de contraseñas!</h4>";
+			alert += "<p>Las contraseñas no coinciden o los campos están vacíos. Vuelva a ingresar las contraseñas.</p>";
+			alert += "</div>";
+			$('#alert').html(alert);
+		}
+</script>
+
 </head>
 <body>
 
@@ -58,16 +81,40 @@
 							</sec:ifLoggedIn>
 						</li>
 						<li>
-								<g:link controller="lecture" action="list">
-									Repositorio de clases
-								</g:link>
+							<g:link controller="lecture" action="list">
+								Repositorio de clases
+							</g:link>
 						</li>
 					</ul>
 					<sec:ifLoggedIn>
-						<p class="navbar-text pull-right">
-							Bienvenido, #<sec:loggedInUserInfo field="username"></sec:loggedInUserInfo>
-							<g:link controller="logout">(Salir)</g:link>
-						</p>
+<%--						<ul class="navbar-text pull-right">--%>
+<%--							<li>--%>
+						<ul class="nav nav-pills pull-right">
+							<li style="padding: 10px 0px 15px 15px; color: #999;">Bienvenido, #</li>
+							<li class="dropdown">
+								<a class="dropdown-toggle" style="padding-left: 0px;" id="drop5" role="button" data-toggle="dropdown" href="#">
+									<sec:loggedInUserInfo field="username"></sec:loggedInUserInfo> <b class="caret"></b>
+								</a>
+								<ul id="menu3" class="dropdown-menu" role="menu"
+									aria-labelledby="drop5">
+									<li role="presentation">
+									<a  href="#editPassModal" role="menuitem" data-toggle="modal" tabindex="-1" href="#">Cambiar Contraseña</a></li>
+<%--									<li role="presentation" class="divider"></li>--%>
+<%--									<li role="presentation"><a role="menuitem" tabindex="-1"--%>
+<%--										href="#">Separated link</a></li>--%>
+								</ul>
+							</li>
+							<li><g:link style="padding-left: 0px;" controller="logout">(Salir)</g:link></li>
+<%--						<p class="navbar-text pull-right">--%>
+<%--							<a href="#" class="dropdown-toggle" data-toggle="dropdown">--%>
+<%--								Dropdown <b class="caret"></b>--%>
+<%--							</a>--%>
+<%--							Bienvenido, #<sec:loggedInUserInfo field="username"></sec:loggedInUserInfo>--%>
+<%--							<g:link controller="logout">(Salir)</g:link>--%>
+<%--						</p>--%>
+<%--							</li>--%>
+<%--						</ul>--%>
+						</ul>
 					</sec:ifLoggedIn>
 				</div>
 				<!--/.nav-collapse -->
@@ -77,6 +124,49 @@
 
 	<div class="container">
 		<g:layoutBody />
+	</div>
+	
+	<div id="editPassModal" class="modal hide fade" tabindex="-1" role="dialog"
+		aria-labelledby="editPassModalLabel" aria-hidden="true">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal"
+				aria-hidden="true">×</button>
+			<h3 id="editPassModalLabel">Editar Contraseña</h3>
+		</div>
+		<g:form controller="profile" action="changePassword" class="form-horizontal" role="form"
+				onsubmit="return validatePassword()">
+			<div class="modal-body">
+			
+<%--				<div class="control-group">--%>
+<%--					<label class="control-label" for="oldPassword">Contraseña anterior:</label>--%>
+<%--					<div class="controls">--%>
+<%--						<g:passwordField name="oldPassword" class="input-xlarge" id="oldPassword" placeholder="Password" />--%>
+<%--					</div>--%>
+<%--				</div>--%>
+				<div class="control-group">
+					<label class="control-label" for="newPassword">Contraseña nueva:</label>
+					<div class="controls">
+						<input type="password" name="newPassword" class="input-large" id="newPassword" placeholder="Password" />
+					</div>
+				</div>
+				<div class="control-group">
+					<label class="control-label" for="passConfirmed">Repita contraseña:</label>
+					<div class="controls">
+						<g:passwordField name="passConfirmed" class="input-large" id="passConfirmed" placeholder="Password" />
+					</div>
+				</div>
+				<div id="alert">
+<%--					<h4 class="alert-heading">Ouch! Error de contraseñas!</h4>--%>
+<%--					<p>Las contraseñas no coinciden. Vuelva a ingresar las contraseñas.</p>--%>
+				</div>
+			
+			</div>
+			<div class="modal-footer">
+				<button class="btn" data-dismiss="modal" aria-hidden="true">Cancelar</button>
+<%--			<button class="btn btn-primary"></button>--%>
+				<g:submitButton name="change" value="Guardar Cambios" class="btn btn-primary" />
+			</div>
+		</g:form>
 	</div>
 
 	<g:javascript library="application" />

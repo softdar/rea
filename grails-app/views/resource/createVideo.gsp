@@ -49,7 +49,7 @@
 				</div>
 			</div>
 			<div class="control-group">
-				<label class="control-label" id="controlURL" for="inputURL">Direccion del video</label>
+				<label class="control-label" id="controlURL" for="inputURL">Dirección del video</label>
 				
 				<div class="controls">
 					<g:textField name="url" id="controlURLInput" class="span7" placeholder="http://www.youtube.com/watch?v=cK-aPU-vRM8" />
