@@ -31,6 +31,16 @@ class ResourceController {
 	}
 	
 	@Secured('ROLE_TEACHER')
+	def edit() {
+		String type = params.type.capitalize()
+		def content = Content.get(params.id)
+		if(type.equals("Image"))
+			render view: "edit${type}", model: [content: content]
+		else
+			redirect(controller: 'profile', action: 'dashboard') // Eliminar al agregar la edición de otros recursos
+	}
+	
+	@Secured('ROLE_TEACHER')
 	def createVideo(String title, String url) {
 
 		def user = springSecurityService.currentUser
@@ -70,7 +80,18 @@ class ResourceController {
 		
 		image.save(failOnError: true)
 		
-				redirect(controller: 'profile', action: 'dashboard')
+		redirect(controller: 'profile', action: 'dashboard')
+	}
+	
+	def updateImage(String title, String url, String text) {
+		def image = ImageContent.get(params.id)
+		printf "params id: ${params.id}"
+		image.setTitle(title)
+		image.setUrl(url) 
+		image.setText(text)
+		image.save(failOnError: true)
+		
+		redirect(controller: 'profile', action: 'dashboard')
 	}
 	
 	@Secured('ROLE_TEACHER')

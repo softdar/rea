@@ -65,13 +65,14 @@
 										<small> ${resource.type}, por ${resource.user.username}
 										</small>
 										<div class="btn-group pull-right">
-<%--											<g:link controller="resource" action="edit"--%>
-<%--												params="[type: resource.type]"--%>
-<%--												class="btn btn-primary" disabled="disabled">--%>
-											<button class="btn btn-primary" disabled="disabled">
+											<g:link controller="resource" action="edit"
+												params="[id: resource.id, type: resource.type]"
+												class="btn btn-primary" >
 												<i class="icon-edit"></i>
 												Editar
-											</button>
+											</g:link>
+<%--											<button class="btn btn-primary" disabled="disabled">--%>
+<%--											</button>--%>
 <%--											</g:link>--%>
 <%--											<g:link controller="resource" action="delete" id="${resource.id}"--%>
 <%--												class="btn btn-danger">--%>

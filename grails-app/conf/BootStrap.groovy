@@ -1,12 +1,12 @@
-import grails.util.GrailsUtil
+//import grails.util.GrailsUtil
+import grails.util.Environment
 
 class BootStrap {
 
 	def fixtureLoader
 
     def init = { servletContext ->
-
-		if (GrailsUtil.environment == 'development') {
+		if (Environment.getCurrent().getName() == 'development') {
 			fixtureLoader.load('dataFixtures')
 		}
 		
