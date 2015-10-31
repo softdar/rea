@@ -297,7 +297,7 @@ body {
 					</button>
 					<a class="brand" href="${createLink(uri: '/')}"><i class="icon-unlock"
 						style="color: white;"></i> rea</a>
-						
+				</div>		
 						
 				<div class="nav-collapse collapse">
 					<ul class="nav">

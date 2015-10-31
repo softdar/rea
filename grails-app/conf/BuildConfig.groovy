@@ -37,6 +37,7 @@ grails.project.dependency.resolution = {
         //mavenRepo "http://download.java.net/maven/2/"
         //mavenRepo "http://repository.jboss.com/maven2/"
 		mavenRepo "http://repo.spring.io/milestone/"
+		mavenRepo "https://repo.grails.org/grails/plugins"
     }
 
     dependencies {
@@ -50,6 +51,7 @@ grails.project.dependency.resolution = {
         runtime ":hibernate:$grailsVersion"
         runtime ":jquery:1.8.3"
         runtime ":resources:1.1.6"
+        runtime ':twitter-bootstrap:3.3.5'
 
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0"
@@ -63,7 +65,7 @@ grails.project.dependency.resolution = {
         compile ':fixtures:1.2'
 		compile ':spring-security-core:2.0-RC2'
 
-		compile ":twitter-bootstrap:2.3.0"
+//		compile ":twitter-bootstrap:2.3.0"
 		compile ":font-awesome-resources:3.0"
 		compile ":richui:0.8"
         compile ':cache:1.0.1'

@@ -19,17 +19,11 @@
 <title><g:layoutTitle default="Recursos Educativos Abiertos" /></title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon"
-	href="${resource(dir: 'images', file: 'favicon.ico')}"
-	type="image/x-icon">
-<link rel="apple-touch-icon"
-	href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
-<link rel="apple-touch-icon" sizes="114x114"
-	href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
+<link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}" type="image/x-icon">
+<link rel="apple-touch-icon" href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
+<link rel="apple-touch-icon" sizes="114x114" href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
 
-<link rel="stylesheet" href="${resource(dir: 'css', file: 'rea.css')}"
-	type="text/css">
-
+<link rel="stylesheet" href="${resource(dir: 'css', file: 'rea.css')}" type="text/css">
 <g:layoutHead />
 <r:require modules="bootstrap" />
 <r:require modules="font-awesome" />
@@ -60,19 +54,23 @@
 
 </head>
 <body>
-
+<%----%>
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="navbar-inner">
-			<div class="container">
-				<button type="button" class="btn btn-navbar" data-toggle="collapse"
-					data-target=".nav-collapse">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-				<a class="brand" href="${createLink(uri: '/')}"><i class="icon-unlock"
-					style="color: white;"></i> rea</a>
-				<div class="nav-collapse collapse">
-					<ul class="nav">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" data-aria-expanded="false">
+						<span class="icon-bar"></span> 
+						<span class="icon-bar"></span> 
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="${createLink(uri: '/')}">
+						<i class="icon-unlock" style="color: white;"></i> rea
+					</a>
+				</div>
+				
+				<div class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
 						<li>
 							<sec:ifLoggedIn>
 								<g:link controller="profile" action="dashboard">
@@ -87,8 +85,6 @@
 						</li>
 					</ul>
 					<sec:ifLoggedIn>
-<%--						<ul class="navbar-text pull-right">--%>
-<%--							<li>--%>
 						<ul class="nav nav-pills pull-right">
 							<li style="padding: 10px 0px 15px 15px; color: #999;">Bienvenido, #</li>
 							<li class="dropdown">
@@ -99,21 +95,9 @@
 									aria-labelledby="drop5">
 									<li role="presentation">
 									<a  href="#editPassModal" role="menuitem" data-toggle="modal" tabindex="-1" href="#">Cambiar Contraseña</a></li>
-<%--									<li role="presentation" class="divider"></li>--%>
-<%--									<li role="presentation"><a role="menuitem" tabindex="-1"--%>
-<%--										href="#">Separated link</a></li>--%>
 								</ul>
 							</li>
 							<li><g:link style="padding-left: 0px;" controller="logout">(Salir)</g:link></li>
-<%--						<p class="navbar-text pull-right">--%>
-<%--							<a href="#" class="dropdown-toggle" data-toggle="dropdown">--%>
-<%--								Dropdown <b class="caret"></b>--%>
-<%--							</a>--%>
-<%--							Bienvenido, #<sec:loggedInUserInfo field="username"></sec:loggedInUserInfo>--%>
-<%--							<g:link controller="logout">(Salir)</g:link>--%>
-<%--						</p>--%>
-<%--							</li>--%>
-<%--						</ul>--%>
 						</ul>
 					</sec:ifLoggedIn>
 				</div>
@@ -126,8 +110,7 @@
 		<g:layoutBody />
 	</div>
 	
-	<div id="editPassModal" class="modal hide fade" tabindex="-1" role="dialog"
-		aria-labelledby="editPassModalLabel" aria-hidden="true">
+	<div id="editPassModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="editPassModalLabel" aria-hidden="true">
 		<div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal"
 				aria-hidden="true">×</button>
@@ -136,13 +119,6 @@
 		<g:form controller="profile" action="changePassword" class="form-horizontal" role="form"
 				onsubmit="return validatePassword()">
 			<div class="modal-body">
-			
-<%--				<div class="control-group">--%>
-<%--					<label class="control-label" for="oldPassword">Contraseña anterior:</label>--%>
-<%--					<div class="controls">--%>
-<%--						<g:passwordField name="oldPassword" class="input-xlarge" id="oldPassword" placeholder="Password" />--%>
-<%--					</div>--%>
-<%--				</div>--%>
 				<div class="control-group">
 					<label class="control-label" for="newPassword">Contraseña nueva:</label>
 					<div class="controls">
@@ -155,15 +131,10 @@
 						<g:passwordField name="passConfirmed" class="input-large" id="passConfirmed" placeholder="Password" />
 					</div>
 				</div>
-				<div id="alert">
-<%--					<h4 class="alert-heading">Ouch! Error de contraseñas!</h4>--%>
-<%--					<p>Las contraseñas no coinciden. Vuelva a ingresar las contraseñas.</p>--%>
-				</div>
-			
+				<div id="alert"></div>
 			</div>
 			<div class="modal-footer">
-				<button class="btn" data-dismiss="modal" aria-hidden="true">Cancelar</button>
-<%--			<button class="btn btn-primary"></button>--%>
+				<button class="btn" data-dismiss="modal" data-aria-hidden="true">Cancelar</button>
 				<g:submitButton name="change" value="Guardar Cambios" class="btn btn-primary" />
 			</div>
 		</g:form>
