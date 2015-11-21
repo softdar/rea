@@ -1,12 +1,6 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
-<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
-<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
-<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!-->
-<html lang="en" class="no-js">
-<!--<![endif]-->
-<head>
+<html lang="">
+  <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
@@ -18,451 +12,400 @@
 
 <title>Recursos Educativos Abiertos</title>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="shortcut icon"
-	href="${resource(dir: 'images', file: 'favicon.ico')}"
-	type="image/x-icon">
-<link rel="apple-touch-icon"
-	href="${resource(dir: 'images', file: 'apple-touch-icon.png')}">
-<link rel="apple-touch-icon" sizes="114x114"
-	href="${resource(dir: 'images', file: 'apple-touch-icon-retina.png')}">
+    <!-- JQuery Functinalities -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-<link rel="stylesheet" href="${resource(dir: 'css', file: 'rea.css')}"
-	type="text/css">
 
-<r:require modules="bootstrap" />
-<r:require modules="font-awesome" />
-<r:layoutResources />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
 
-<style>
-/* GLOBAL STYLES
-    -------------------------------------------------- */
-/* Padding below the footer and lighter body text */
-body {
-	padding-bottom: 40px;
-	color: #5a5a5a;
-}
+        <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style type="text/css">
 
-/* CUSTOMIZE THE NAVBAR
-    -------------------------------------------------- */
+      /* GLOBAL STYLES
+      -------------------------------------------------- */
+      /* Padding below the footer and lighter body text */
 
-/* Special class on .container surrounding .navbar, used for positioning it into place. */
-.navbar-wrapper {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 10;
-	margin-top: 20px;
-	margin-bottom: -90px;
-	/* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
-}
+      body {
+        padding-bottom: 40px;
+        color: #5a5a5a;
+      }
 
-.navbar-wrapper .navbar {
+
+      /* CUSTOMIZE THE NAVBAR
+      -------------------------------------------------- */
+
+      /* Special class on .container surrounding .navbar, used for positioning it into place. */
+      .navbar-wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 20;
+      }
+
+      /* Flip around the padding for proper display in narrow viewports */
+      .navbar-wrapper > .container {
+        padding-right: 0;
+        padding-left: 0;
+      }
+      .navbar-wrapper .navbar {
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+      .navbar-wrapper .navbar .container {
+        width: auto;
+      }
+
+      .navbar {
+         background-color: transparent;
+         background: transparent;
+         border-color: transparent;
+      }
+
+      .dropdown-menu.dropdown-header li  {
+         background-color: transparent;
+         background: transparent;
+         border-color: transparent;
+      }
+
+      .navbar li { color: #000 }
+
+      #d1 {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        display: none;
+        float: left;
+        min-width: 160px;
+        padding: 5px 0;
+        margin: 2px 0 0;
+        font-size: 14px;
+        text-align: left;
+        list-style: none;
+        background-color: transparent; /* here */
+        -webkit-background-clip: padding-box;
+        background-clip: padding-box;
+        border: 1px solid #ccc;
+        border: 1px solid rgba(0,0,0,.15);
+        border-radius: 4px;
+        -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+        box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    }
+
+
+      /* CUSTOMIZE THE CAROUSEL
+      -------------------------------------------------- */
+
+      /* Carousel base class */
+      .carousel {
+        height: 500px;
+        margin-bottom: 60px;
+      }
+      /* Since positioning the image, we need to help out the caption */
+      .carousel-caption {
+        z-index: 10;
+      }
+
+      /* Declare heights because of positioning of img element */
+      .carousel .item {
+        height: 500px;
+        background-color: #777;
+      }
+      .carousel-inner > .item > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        height: 500px;
+      }
+
+
+      /* MARKETING CONTENT
+      -------------------------------------------------- */
+
+      /* Center align the text within the three columns below the carousel */
+      .marketing .col-lg-4 {
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .marketing h2 {
+        font-weight: normal;
+      }
+      .marketing .col-lg-4 p {
+        margin-right: 10px;
+        margin-left: 10px;
+      }
+
+
+      /* Featurettes
+      ------------------------- */
+
+      .featurette-divider {
+        margin: 80px 0; /* Space out the Bootstrap <hr> more */
+      }
+
+      /* Thin out the marketing headings */
+      .featurette-heading {
+        font-weight: 300;
+        line-height: 1;
+        letter-spacing: -1px;
+      }
+
+
+      /* RESPONSIVE CSS
+      -------------------------------------------------- */
+
+      @media (min-width: 768px) {
+        /* Navbar positioning foo */
+        .navbar-wrapper {
+          margin-top: 20px;
+        }
+        .navbar-wrapper .container {
+          padding-right: 15px;
+          padding-left: 15px;
+        }
+        .navbar-wrapper .navbar {
+          padding-right: 0;
+          padding-left: 0;
+        }
+
+        /* The navbar becomes detached from the top, so we round the corners */
+        .navbar-wrapper .navbar {
+          border-radius: 4px;
+        }
+
+        /* Bump up size of carousel content */
+        .carousel-caption p {
+          margin-bottom: 20px;
+          font-size: 21px;
+          line-height: 1.4;
+        }
+
+        .featurette-heading {
+          font-size: 50px;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .featurette-heading {
+          margin-top: 120px;
+        }
+      }
+      
+      .carousel-caption .well {
+	    background-color: rgba(35, 35, 35, 0.5);
+	    border-color: #000;
+	    padding: 30px 15px;
+	    margin-top: 135px;
+	}
 	
-}
-
-/* Remove border and change up box shadow for more contrast */
-.navbar .navbar-inner {
-	border: 0;
-	-webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, .25);
-	-moz-box-shadow: 0 2px 10px rgba(0, 0, 0, .25);
-	box-shadow: 0 2px 10px rgba(0, 0, 0, .25);
-}
-
-/* Downsize the brand/project name a bit */
-.navbar .brand {
-	padding: 14px 20px 16px;
-	/* Increase vertical padding to match navbar links */
-	font-size: 16px;
-	font-weight: bold;
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, .5);
-}
-
-/* Navbar links: increase padding for taller navbar */
-.navbar .nav>li>a {
-	padding: 15px 20px;
-}
-
-/* Offset the responsive button for proper vertical alignment */
-.navbar .btn-navbar {
-	margin-top: 10px;
-}
-
-/* CUSTOMIZE THE CAROUSEL
-    -------------------------------------------------- */
-
-/* Carousel base class */
-.carousel {
-	margin-bottom: 60px;
-}
-
-.carousel .container {
-	position: relative;
-	z-index: 9;
-}
-
-.carousel-control {
-	height: 80px;
-	margin-top: 0;
-	font-size: 120px;
-	text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
-	background-color: transparent;
-	border: 0;
-	z-index: 10;
-}
-
-.carousel .item {
-	height: 500px;
-}
-
-.carousel img {
-	position: absolute;
-	top: 0;
-	left: 0;
-	min-width: 100%;
-	height: 500px;
-}
-
-.carousel-caption {
-	background-color: transparent;
-	position: static;
-	max-width: 585px;
-	padding: 0 20px;
-	margin-top: 200px;
-}
-
-.carousel-caption.well {
-	background-color: rgba(35, 35, 35, 0.5);
-	border-color: #000;
-	padding: 30px 15px;
-	margin-top: 135px;
-}
-
-.carousel-caption.well h1,.carousel-caption.well p {
-	text-shadow: 1px 1px 2px #000 !important;
-}
-
-.carousel-caption h1,.carousel-caption .lead {
-	margin: 0;
-	line-height: 1.25;
-	color: #fff;
-	text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
-}
-
-.carousel-caption .btn {
-	margin-top: 10px;
-}
-
-/* MARKETING CONTENT
-    -------------------------------------------------- */
-
-/* Center align the text within the three columns below the carousel */
-.marketing .span4 {
-	text-align: center;
-}
-
-.marketing h2 {
-	font-weight: normal;
-}
-
-.marketing .span4 p {
-	margin-left: 10px;
-	margin-right: 10px;
-}
-
-/* Featurettes
-    ------------------------- */
-.featurette-divider {
-	margin: 80px 0; /* Space out the Bootstrap <hr> more */
-}
-
-.featurette {
-	padding-top: 120px;
-	/* Vertically center images part 1: add padding above and below text. */
-	overflow: hidden;
-	/* Vertically center images part 2: clear their floats. */
-}
-
-.featurette-image {
-	margin-top: -120px;
-	/* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
-}
-
-/* Give some space on the sides of the floated elements so text doesn't run right into it. */
-.featurette-image.pull-left {
-	margin-right: 40px;
-}
-
-.featurette-image.pull-right {
-	margin-left: 40px;
-}
-
-/* Thin out the marketing headings */
-.featurette-heading {
-	font-size: 50px;
-	font-weight: 300;
-	line-height: 1;
-	letter-spacing: -1px;
-}
-
-/* RESPONSIVE CSS
-    -------------------------------------------------- */
-@media ( max-width : 979px) {
-	.container.navbar-wrapper {
-		margin-bottom: 0;
-		width: auto;
+	footer {
+		background-color: #666;
+		color: white;
+		text-align: center;
 	}
-	.navbar-inner {
-		border-radius: 0;
-		margin: -20px 0;
-	}
-	.carousel .item {
-		height: 500px;
-	}
-	.carousel img {
-		width: auto;
-		height: 500px;
-	}
-	.featurette {
-		height: auto;
-		padding: 0;
-	}
-	.featurette-image.pull-left,.featurette-image.pull-right {
-		display: block;
-		float: none;
-		max-width: 40%;
-		margin: 0 auto 20px;
-	}
-}
+	
+    </style>
+  </head>
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
 
-@media ( max-width : 767px) {
-	.navbar-inner {
-		margin: -20px;
-	}
-	.carousel {
-		margin-left: -20px;
-		margin-right: -20px;
-	}
-	.carousel .container {
-		
-	}
-	.carousel .item {
-		height: 300px;
-	}
-	.carousel img {
-		height: 300px;
-	}
-	.carousel-caption {
-		width: 65%;
-		padding: 0 70px;
-		margin-top: 100px;
-	}
-	.carousel-caption h1 {
-		font-size: 30px;
-	}
-	.carousel-caption .lead,.carousel-caption .btn {
-		font-size: 18px;
-	}
-	.marketing .span4+.span4 {
-		margin-top: 40px;
-	}
-	.featurette-heading {
-		font-size: 30px;
-	}
-	.featurette .lead {
-		font-size: 18px;
-		line-height: 1.5;
-	}
-}
-</style>
-
-</head>
-
-<body class="intro">
-
-	<!-- NAVBAR
-    ================================================== -->
-	<div class="navbar-wrapper">
-		<!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
-		<div class="container">
-
-			<div class="navbar navbar-inverse">
-				<div class="navbar-inner">
-					<!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
-					<button type="button" class="btn btn-navbar" data-toggle="collapse"
-						data-target=".nav-collapse">
-						<span class="icon-bar"></span> <span class="icon-bar"></span> <span
-							class="icon-bar"></span>
-					</button>
-					<a class="brand" href="${createLink(uri: '/')}"><i class="icon-unlock"
-						style="color: white;"></i> rea</a>
-				</div>		
-						
-				<div class="nav-collapse collapse">
-					<ul class="nav">
-						<li>
-								<g:link controller="lecture" action="list">
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">
+                <span class="glyphicon glyphicon-link" aria-hidden="true"></span>
+                rea
+              </a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li>
+                <g:link controller="lecture" action="list">
 									Repositorio de clases
 								</g:link>
-						</li>
-					</ul>
-				</div>
-						
-						
-					<ul class="nav pull-right">
-						<li><g:link controller="login" class="pull-right">Ingresar</g:link></li>
-					</ul>
-					<!--/.nav-collapse -->
-				</div>
-				<!-- /.navbar-inner -->
-			</div>
-			<!-- /.navbar -->
+                </li>
+                
+              </ul>
+              	
+			<ul class="nav navbar-right navbar-right">
+				<li><g:link controller="login" >Ingresar</g:link></li>
+			</ul>
+            </div>
+          </div>
+        </nav>
 
-		</div>
-		<!-- /.container -->
-	</div>
-	<!-- /.navbar-wrapper -->
+      </div>
+    </div>
 
-	<!-- Carousel
+    <div id="carousel-id" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-id" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-id" data-slide-to="1" class=""></li>
+            <li data-target="#carousel-id" data-slide-to="2" class=""></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="${resource(dir: 'img', file: 'carousel-1.jpg')}" alt="First slide">
+                <div class="container">
+                    <div class="carousel-caption">
+                    	<div class="well">
+	                        <h1>Recursos Educativos Abiertos</h1>
+	                        <p>
+	                          Los Recursos Educativos Abiertos son diversos materiales 
+	                          que se utilizan para el aprendizaje, la enseñanza e 
+	                          investigación a los que se accede de modo masiva, 
+	                          fácil, y gratuita. Generalmente pertenecen al Dominio 
+	                          Público, o bien se encuentran bajo una licencia abierta.
+	                        </p>
+	                        <p><a class="btn btn-lg btn-primary" href="#modalVideo" role="button" data-toggle="modal">Video Explicativo</a></p>
+                    	</div>
+                    </div>
+                </div>
+            </div>
+            <div id="modalVideo" class="modal fade">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title">Recursos Educativos Abiertos</h4>
+			      </div>
+			      <div class="modal-body">
+			        <script type="text/javascript"
+						src="http://s3.amazonaws.com/s3.www.universalsubtitles.org/embed.js">
+						({
+						"video_url" : "http://vimeo.com/43456503"
+						})
+					</script>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-primary" data-dismiss="modal">Volver</button>
+			      </div>
+			    </div><!-- /.modal-content -->
+			  </div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+            
+            <div class="item">
+                <img alt="Second slide" src="${resource(dir: 'img', file: 'carousel-2.jpg')}">
+                <div class="container">
+                    <div class="carousel-caption">
+	                    <div class="well">
+	                        <h1>Colaboración</h1>
+	                        <p>
+	                        La colaboración resulta ser uno de los dos valores pilares que posee el modelo de código abierto, dado que es la forma en que las comunidades de interés generan distintos productos. La colaboración se convirtió en la principal competencia y motor de innovación del siglo XXI.
+	                        </p>
+	                    </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img alt="Third slide" src="${resource(dir: 'img', file: 'carousel-3.jpg')}">
+                <div class="container">
+                    <div class="carousel-caption">
+                    	<div class="well">
+	                        <h1>Dominio Publico</h1>
+	                        <p>
+	                        El Dominio Público es el estado menos restrictivo en el cual pueden encontrarse los Recursos Educativos Abiertos, esto implica que no solo podemos leerlos, editarlos, adaptarlos y compartirlos sino que además no se necesita mencionar su autor. Es por esto que son ideales para el remix digital. 
+	                        </p>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="left carousel-control" href="#carousel-id" data-slide="prev" role="button">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel-id" data-slide="next" role="button">
+          <span class="glyphicon glyphicon-chevron-right"
+        </span></a>
+    </div>
+
+
+    <!-- Marketing messaging and featurettes
     ================================================== -->
-	<div id="myCarousel" class="carousel slide">
-		<div class="carousel-inner">
-			<div class="item active">
-				<img src="${resource(dir: 'img', file: 'carousel-1.jpg')}" alt="">
-				<div class="container">
-					<div class="carousel-caption well">
-						<h1>Recursos Educativos Abiertos</h1>
-						<p class="lead">Los Recursos Educativos Abiertos son diversos
-							materiales que se utilizan para el aprendizaje, la enseñanza e
-							investigación a los que se accede de modo masiva, fácil, y
-							gratuita. Generalmente pertenecen al Dominio Público, o bien se
-							encuentran bajo una licencia abierta.</p>
-						<a href="#modalVideo" class="btn btn-large btn-primary"
-							data-toggle="modal">Ver video explicativo</a>
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				<img src="${resource(dir: 'img', file: 'carousel-2.jpg')}" alt="">
-				<div class="container">
-					<div class="carousel-caption well">
-						<h1>Colaboración</h1>
-						<p class="lead">La colaboración resulta ser uno de los dos
-							valores pilares que posee el modelo de código abierto, dado que
-							es la forma en que las comunidades de interés generan distintos
-							productos. La colaboración se convirtió en la principal
-							competencia y motor de innovación del siglo XXI.</p>
-					</div>
-				</div>
-			</div>
-			<div class="item">
-				<img src="${resource(dir: 'img', file: 'carousel-3.jpg')}" alt="">
-				<div class="container">
-					<div class="carousel-caption well">
-						<h1>Dominio Publico</h1>
-						<p class="lead">El Dominio Público es el estado menos
-							restrictivo en el cual pueden encontrarse los Recursos Educativos
-							Abiertos, esto implica que no solo podemos leerlos, editarlos,
-							adaptarlos y compartirlos sino que además no se necesita
-							mencionar su autor. Es por esto que son ideales para el remix
-							digital.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-		<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-	</div>
-	<!-- /.carousel -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
 
-	<div id="modalVideo" class="modal hide fade" tabindex="-1"
-		role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal"
-				aria-hidden="true">×</button>
-			<h3 id="myModalLabel">Recursos Educativos Abiertos</h3>
-		</div>
-		<div class="modal-body">
-			<script type="text/javascript"
-				src="http://s3.amazonaws.com/s3.www.universalsubtitles.org/embed.js">
-				({
-					"video_url" : "http://vimeo.com/43456503"
-				})
-			</script>
-		</div>
-		<div class="modal-footer">
-			<button class="btn" data-dismiss="modal" aria-hidden="true">Volver</button>
-		</div>
-	</div>
+    <div class="container marketing">
 
-	<!-- Marketing messaging and featurettes
-    ================================================== -->
-	<!-- Wrap the rest of the page in another container to center all the content. -->
-
-	<div class="container marketing">
-
-		<!-- Three columns of text below the carousel -->
-		<div class="row-fluid">
-			<div class="span4">
-				<img class="img-circle"
-					src="${resource(dir: 'img/landing', file: 'circle_three.jpg')}">
-				<h2>Apertura</h2>
-				<p class="justified">La apertura asegura que los REA puedan ser leídos, editados,
-					adaptados y compartidos sin la necesidad de utilizar programas
-					propietarios. Deben pertenecer al Dominio Público, o bien
-					encontrarse bajo una licencia abierta, y su acceso debe ser fácil
-					masivo y gratuito.</p>
-				<p>
-					<a href="#modalREA" role="button" class="btn pull-right" data-toggle="modal">Detalles
-						&raquo;</a>
-				</p>
-			</div>
-
-			<div id="modalREA" class="modal hide fade" tabindex="-1"
-				role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal"
-						aria-hidden="true">×</button>
-					<h3 id="myModalLabel">Recursos Educativos Abiertos (REA)</h3>
-				</div>
-				<div class="modal-body">
-					<p>Según la definición de la UNESCO en el 2012 los Recursos
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="${resource(dir: 'img/landing', file: 'circle_three.jpg')}" alt="Generic placeholder image" width="140" height="140">
+          <h2>Apertura</h2>
+          <p>
+          	La apertura asegura que los REA puedan ser leídos, editados, adaptados 
+          	y compartidos sin la necesidad de utilizar programas propietarios. 
+          	Deben pertenecer al Dominio Público, o bien encontrarse bajo una 
+          	licencia abierta, y su acceso debe ser fácil masivo y gratuito.
+          </p>
+          <p>
+          	<a href="#modalREA" role="button" class="btn btn-default" data-toggle="modal">
+          		Detalles&raquo;
+          	</a>
+		  </p>	
+        </div><!-- /.col-lg-4 -->
+        
+        <div id="modalREA" class="modal fade">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title">Recursos Educativos Abiertos (REA)</h4>
+			      </div>
+			      <div class="modal-body">
+			        <p>Según la definición de la UNESCO en el 2012 los Recursos
 						Educativos Abiertos (REA) son: “…materiales de enseñanza,
 						aprendizaje e investigación en cualquier medio, digital o no, que
 						residen en el dominio público o que se han publicado bajo una
 						licencia abierta que permita el acceso sin costo, el uso, la
 						adaptación y redistribución por otros con poca o ninguna
 						restricción”.</p>
-				</div>
-				<div class="modal-footer">
-					<button class="btn" data-dismiss="modal" aria-hidden="true">Volver</button>
-				</div>
-			</div>
-
-			<div class="span4">
-				<img class="img-circle"
-					src="${resource(dir: 'img/landing', file: 'circle_two.png')}">
-				<h2>Movimiento abierto</h2>
-				<p class="justified">El modelo del código abierto está basado en dos valores
-					principales, la apertura de su código y la producción colaborativa
-					de su comunidad. Dichos valores han desembarcado en empresas,
-					gobiernos y las organizaciones educativas no son la excepción.</p>
-				<p>
-					<a href="#modalOpenMovement" role="button" class="btn pull-right"
-						data-toggle="modal">Detalles &raquo;</a>
-				</p>
-			</div>
-
-			<div id="modalOpenMovement" class="modal hide fade" tabindex="-1"
-				role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal"
-						aria-hidden="true">×</button>
-					<h3 id="myModalLabel">Movimiento abierto</h3>
-				</div>
-				<div class="modal-body">
-					<p>La valoración de que algo sea abierto vino dada a fines de
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Volver</button>
+			      </div>
+			    </div><!-- /.modal-content -->
+			  </div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+			
+        <div class="col-lg-4">
+          <img class="img-circle" src="${resource(dir: 'img/landing', file: 'circle_two.png')}" alt="Generic placeholder image" width="140" height="140">
+          <h2>Movimiento abierto</h2>
+          <p>
+          El modelo del código abierto está basado en dos valores principales, la apertura de su código y la producción colaborativa de su comunidad. Dichos valores han desembarcado en empresas, gobiernos y las organizaciones educativas no son la excepción.
+          </p>
+          <p>
+          	<a href="#modalOpenMovement" role="button" class="btn btn-default" data-toggle="modal">
+          		Detalles&raquo;
+          	</a>
+		  </p>
+        </div><!-- /.col-lg-4 -->
+        <div id="modalOpenMovement" class="modal fade">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title">Movimiento abierto</h4>
+			      </div>
+			      <div class="modal-body">
+			        <p>La valoración de que algo sea abierto vino dada a fines de
 						la década de los 70s de la mano de Richard Stallman. Con el tiempo
 						el contenido que se fue abriendo no se limitó a programas de
 						software, hoy en día existen libros, enciclopedias, música,
@@ -473,35 +416,43 @@ body {
 						educación. En la actualidad el movimiento abierto está tomando
 						cada día más fuerza. Hay más de 400.000 obras con licencias poco o
 						nada restrictivas fomentando una cultura abierta.</p>
-				</div>
-				<div class="modal-footer">
-					<button class="btn" data-dismiss="modal" aria-hidden="true">Volver</button>
-				</div>
-			</div>
-
-			<div class="span4">
-				<img class="img-circle"
-					src="${resource(dir: 'img/landing', file: 'circle_one.gif')}">
-				<h2>Dimensiones</h2>
-				<p class="justified">Las licencias Creative Commons son un instrumento legal
-					fundamental para el movimiento abierto ya nos permiten
-					publicar/copiar, darle uso comercial, modificar/adaptar, y cambiar
-					de licencia, solo debemos mencionar al autor del recurso.</p>
-				<p>
-					<a href="#modalDimensions" role="button" class="btn pull-right"
-						data-toggle="modal">Detalles &raquo;</a>
-				</p>
-			</div>
-
-			<div id="modalDimensions" class="modal hide fade" tabindex="-1"
-				role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal"
-						aria-hidden="true">×</button>
-					<h3 id="myModalLabel">Dimensiones</h3>
-				</div>
-				<div class="modal-body">
-					<p>Hay tres dimensiones de apertura que poseen los Recursos
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Volver</button>
+			      </div>
+			    </div><!-- /.modal-content -->
+			  </div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
+        
+        
+        <div class="col-lg-4">
+          <img class="img-circle" src="${resource(dir: 'img/landing', file: 'circle_one.gif')}" alt="Generic placeholder image" width="140" height="140">
+          <h2>Dominio Publico</h2>
+          <p>
+          El Dominio Público es el estado menos
+          restrictivo en el cual pueden encontrarse los Recursos Educativos
+          Abiertos, esto implica que no solo podemos leerlos, editarlos,
+          adaptarlos y compartirlos sino que además no se necesita
+          mencionar su autor. Es por esto que son ideales para el remix
+          digital.
+          </p>
+          <p>
+          	<a href="#modalDimensions" role="button" class="btn btn-default" data-toggle="modal">
+          		Detalles&raquo;
+          	</a>
+		  </p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+      
+      <div id="modalDimensions" class="modal fade">
+			  <div class="modal-dialog">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        <h4 class="modal-title">Dimensiones</h4>
+			      </div>
+			      <div class="modal-body">
+			        <p>Hay tres dimensiones de apertura que poseen los Recursos
 						Educativos Abiertos:</p>
 					<p>
 					<ul>
@@ -518,45 +469,31 @@ body {
 							abierta es Creative Commons.</li>
 					</ul>
 					</p>
-				</div>
-				<div class="modal-footer">
-					<button class="btn" data-dismiss="modal" aria-hidden="true">Volver</button>
-				</div>
-			</div>
+			      </div>
+			      <div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">Volver</button>
+			      </div>
+			    </div><!-- /.modal-content -->
+			  </div><!-- /.modal-dialog -->
+			</div><!-- /.modal -->
 
+
+
+
+    </div><!-- /.container -->
+    
+          <!-- FOOTER -->
+      <footer>
+        <div class="container">
+			<img src="${resource(dir: 'img/landing', file: 'ingenieria_logo.png')}">
+			<h4>
+				Fecha de inicio: Marzo de 2013
+			</h4>
+			<h4>
+				Fecha de actualización: Noviembre de 2015 
+			</h4>
 		</div>
-		<!-- /.row -->
-
-		<!-- FOOTER -->
-		<footer>
-			<div class="container">
-
-				<!-- Three columns of text below the carousel -->
-				<div class="row-fluid">
-					<div class="span4">
-
-						<ul class="links">
-							<li><i class="icon-github"></i> <a
-								href="http://www.github.com/delucas/rea">código fuente</a></li>
-						</ul>
-
-					</div>
-				</div>
-			</div>
-
-		</footer>
-
-	</div>
-	<!-- /.container -->
-
-	<g:javascript library="application" />
-	<r:layoutResources />
-
-	<script>
-		$(function() {
-			$('#myCarousel').carousel()
-		})
-	</script>
-
-</body>
+<%--        <p>&copy; 2014 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>--%>
+      </footer>
+  </body>
 </html>
