@@ -17,7 +17,7 @@ environments {
 			driverClassName = "org.postgresql.Driver"
 			dialect = org.hibernate.dialect.PostgreSQLDialect
 
-			uri = new URI("postgres://openclassroom:openclassroom@localhost:5432/rea_development")
+			uri = new URI("postgres://rea:rea@localhost:5432/rea")
 
 			url = "jdbc:postgresql://${uri.host}:${uri.port}${uri.path}"
 			username = uri.userInfo.split(":")[0]

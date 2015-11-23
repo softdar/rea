@@ -17,3 +17,5 @@ stacktrace.log
 /target-eclipse/
 .classpath
 .project
+.idea/
+/*.iml
