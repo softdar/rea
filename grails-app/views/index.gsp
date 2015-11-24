@@ -211,8 +211,10 @@
 	
 	footer {
 		background-color: #666;
+    padding-top: 2em;
 		color: white;
 		text-align: center;
+    margin-top: 2em;
 	}
 	
     </style>
@@ -478,6 +480,55 @@
 			</div><!-- /.modal -->
 
 
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          <legend>Trabajos publicados</legend>
+
+          <ul>
+
+          <li><p>Mavrommatis, H., Videla, L., &amp; Favieri, M. A. (2013) Recursos Educativos Abiertos, experiencias, conceptos, y barreras de implementación.</p>
+          <p>Disponible <a href="http://www.researchgate.net/profile/Adriana_Favieri/publication/269633043_Recursos_Educativos_Abiertos_experiencias_conceptos_y_barreras_de_implementacin/links/549075040cf225bf66a83a5a.pdf">aqui</a>.</p>
+          </li>
+
+                    <li><p>Mavrommatis, H., Videla, L., &amp; Favieri, A. (2014). Criterios sobre el diseño de una plataforma de Recursos Educativos Abiertos. In XLIII Jornadas Argentinas de Informática e Investigación Operativa (43JAIIO)-I Simposio Argentino de Tecnología y Sociedad (STS)(Buenos Aires, 2014).</p>
+          <p>Disponible <a href="http://sedici.unlp.edu.ar/bitstream/handle/10915/41869/Documento_completo.pdf?sequence=1">aqui</a>.</p>
+          </li>
+
+                              <li><p>Favieri, A., &amp; Mavrommatis, H. (2014). Plataforma sobre recursos educativos abiertos de la Universidad Nacional de La Matanza: importancia y ventajas. In XX Congreso Argentino de Ciencias de la Computación (Buenos Aires, 2014).</p>
+          <p>Disponible <a href="http://sedici.unlp.edu.ar/bitstream/handle/10915/42372/Documento_completo.pdf?sequence=1">aqui</a>.</p>
+          </li>
+
+          </ul>
+
+          <legend>Recursos útiles</legend>
+          <ul>
+            <li>
+<a href="http://exelearning.net/html_manual/exe_es/">Tutorial eXelearning</a></li>
+
+          </ul>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <legend>Descripción de la plataforma</legend>
+
+          <ul>
+            <li>
+          Está orientada a contenidos breves de distinto tipo (imágenes, videos, textos, etc.), permitiendo abrir gradualmente las producciones de conocimiento de los profesores.  
+            </li>
+            <li>
+            Posee una granularidad por temas y no por cursos o materias, evitando la asociación directa con cada una de las materias que trata el tema.
+            </li>
+            <li>Facilita el remix y la compilación de recursos existentes, para que la plataforma crezca sobre recursos existentes.</li>
+<li>Permite incorporar contenidos generados con herramientas de autor tales como eXelearning.</li>
+<li>Es ubicua, es decir se puede consumir de cualquier dispositivo incluso móvil, facilitando el consumo de contenidos.</li>
+<li>Funciona como complemento del aprendizaje formal, posicionando la plataforma como un complemento y no un reemplazo o competencia de plataformas tradicionales de educación a distancia.</li>
+          </ul>
+
+          
+
+
+        </div>
+      </div>
+
 
 
     </div><!-- /.container -->
@@ -485,6 +536,9 @@
           <!-- FOOTER -->
       <footer>
         <div class="container">
+
+        <p>Proyecto de investigación “Plataforma de Recursos Educativos Abiertos de la<br/>Universidad Nacional de la Matanza” (C2-ING-024)</p>
+
 			<img src="${resource(dir: 'img/landing', file: 'ingenieria_logo.png')}">
 			<h4>
 				Fecha de inicio: Marzo de 2013
