@@ -25,8 +25,19 @@
 
 <link rel="stylesheet" href="${resource(dir: 'css', file: 'rea.css')}" type="text/css">
 <g:layoutHead />
-<r:require modules="bootstrap" />
-<r:require modules="font-awesome" />
+
+<!-- JQuery Functinalities -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" 
+	integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" 
+    crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" 
+	integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" 
+    crossorigin="anonymous"></script>
 <r:layoutResources />
 
 <script type="text/javascript">
@@ -55,54 +66,62 @@
 </head>
 <body>
 <%----%>
-	<div class="navbar navbar-inverse navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" data-aria-expanded="false">
-						<span class="icon-bar"></span> 
-						<span class="icon-bar"></span> 
-						<span class="icon-bar"></span>
-					</button>
-					<a class="navbar-brand" href="${createLink(uri: '/')}">
-						<i class="icon-unlock" style="color: white;"></i> rea
-					</a>
-				</div>
-				
-				<div class="collapse navbar-collapse">
-					<ul class="nav navbar-nav">
-						<li>
-							<sec:ifLoggedIn>
-								<g:link controller="profile" action="dashboard">
-									Escritorio
-								</g:link>
-							</sec:ifLoggedIn>
-						</li>
-						<li>
-							<g:link controller="lecture" action="list">
-								Repositorio de clases
-							</g:link>
-						</li>
-					</ul>
-					<sec:ifLoggedIn>
-						<ul class="nav nav-pills pull-right">
-							<li style="padding: 10px 0px 15px 15px; color: #999;">Bienvenido, #</li>
-							<li class="dropdown">
-								<a class="dropdown-toggle" style="padding-left: 0px;" id="drop5" role="button" data-toggle="dropdown" href="#">
-									<sec:loggedInUserInfo field="username"></sec:loggedInUserInfo> <b class="caret"></b>
-								</a>
-								<ul id="menu3" class="dropdown-menu" role="menu"
-									aria-labelledby="drop5">
-									<li role="presentation">
-									<a  href="#editPassModal" role="menuitem" data-toggle="modal" tabindex="-1" href="#">Cambiar Contraseña</a></li>
-								</ul>
-							</li>
-							<li><g:link style="padding-left: 0px;" controller="logout">(Salir)</g:link></li>
-						</ul>
-					</sec:ifLoggedIn>
-				</div>
-				<!--/.nav-collapse -->
+	<div class="navbar navbar-fixed-top navbar-inverse">
+		<div class="container-fluid"> 
+			<div class="navbar-header"> 
+				<button type="button" class="navbar-toggle collapsed" 
+					data-toggle="collapse" data-target="#bs-example-navbar-collapse-8" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span> 
+					<span class="icon-bar"></span> 
+				</button>  
+				<a class="navbar-brand" href="${createLink(uri: '/')}">
+					<span class="glyphicon glyphicon-link" aria-hidden="true"></span> rea
+				</a>
 			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-8">
+				<ul class="nav navbar-nav"> 
+					<li>
+						<sec:ifLoggedIn>
+							<g:link controller="profile" action="dashboard">
+								Escritorio
+							</g:link>
+						</sec:ifLoggedIn>		
+					</li>
+					<li>
+						<g:link controller="lecture" action="list">
+							Repositorio de clases
+						</g:link>
+					</li>
+  				</ul>
+  				<sec:ifLoggedIn>
+  					<ul class="nav navbar-nav nav-pills pull-right">
+						<li style="padding: 15px 0px 15px 15px; color: #999;">Bienvenido, #</li>
+						<li class="dropdown">
+							<a aria-expanded="false" 
+								class="dropdown-toggle" 
+								style="padding-left: 0px;" 
+								id="drop5" 
+								role="button" 
+								data-toggle="dropdown" 
+								href="#">
+								<sec:loggedInUserInfo field="username"></sec:loggedInUserInfo> <b class="caret"></b>
+							</a>
+				 			<ul id="menu3" class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="drop5">
+								<li role="presentation">
+									<a href="#editPassModal" 
+										role="menuitem" 
+										data-toggle="modal" 
+										tabindex="-1">Cambiar Contraseña</a>
+								</li>
+							</ul>
+						</li>
+						<li><g:link style="padding-left: 0px;" controller="logout">(Salir)</g:link></li>
+					</ul>
+				</sec:ifLoggedIn> 
+			</div>
+			
 		</div>
 	</div>
 
@@ -110,12 +129,38 @@
 		<g:layoutBody />
 	</div>
 	
+	<div id="editPassModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="editPassModalLabel">
+		<div class="modal-dialog" role="document">
+    		<div class="modal-content">
+    			<div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        				<span aria-hidden="true">&times;</span>
+        			</button>
+        			<h4 id="editPassModalLabel" class="modal-title">Editar Contraseña</h4>
+      			</div>
+      			
+      			<g:form controller="profile" action="changePassword" onsubmit="return validatePassword()">
+      				<div class="modal-body">
+        				<div class="form-group">
+    						<label for="newPassword">Contraseña nueva:</label>
+    						<input type="password" id="newPassword" name="newPassword" class="form-control"  placeholder="Password">
+ 				 		</div>
+ 				 		<div class="form-group">
+    						<label for="passConfirmed">Repita contraseña:</label>
+    						<g:passwordField id="passConfirmed" name="passConfirmed" class="form-control" placeholder="Password" />
+ 				 		</div>
+ 				 		<div id="alert"></div>
+      				</div>
+					<div class="modal-footer">
+        				<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+        				<g:submitButton name="change" value="Guardar Cambios" class="btn btn-primary" />
+      				</div>
+				</g:form>
+    		</div>
+    	</div>
+	</div>
+	
 	<div id="editPassModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="editPassModalLabel" aria-hidden="true">
-		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal"
-				aria-hidden="true">×</button>
-			<h3 id="editPassModalLabel">Editar Contraseña</h3>
-		</div>
 		<g:form controller="profile" action="changePassword" class="form-horizontal" role="form"
 				onsubmit="return validatePassword()">
 			<div class="modal-body">
@@ -139,7 +184,7 @@
 			</div>
 		</g:form>
 	</div>
-
+	
 	<g:javascript library="application" />
 	<r:layoutResources />
 </body>

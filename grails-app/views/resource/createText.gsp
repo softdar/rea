@@ -13,24 +13,42 @@
 <div class="well">
 <g:form action="createText" controller="resource" class="form-horizontal" role="form">
 	<br>
-	<div class="control-group">
-		<label class="control-label" for="inputTitulo">Titulo</label>
-		<div class="controls">
-			<g:textField name="title" class="span7" id="inputTitulo" placeholder="Titulo del Texto"/>
+<%--	<div class="control-group">--%>
+<%--		<label class="control-label" for="inputTitulo">Titulo</label>--%>
+<%--		<div class="controls">--%>
+<%--			<g:textField name="title" class="span7" id="inputTitulo" placeholder="Titulo del Texto"/>--%>
+<%--		</div>--%>
+<%--	</div>--%>
+	<div class="form-group">
+		<label for="inputTitulo" class="col-sm-2 control-label">Título</label>
+		<div class="col-sm-8">
+			<g:textField name="title" class="form-control" id="inputTitulo" placeholder="Titulo del Texto" />
 		</div>
 	</div>
-	<div class="control-group">
-		<label class="control-label" id="controlURL" for="text">Contenido</label>
-		<div class="controls">
-<%--			<g:textArea name="text" id="text" class="span7" placeholder="Ingrese aquí su texto"></g:textArea>--%>
+<%--	<div class="control-group">--%>
+<%--		<label class="control-label" id="controlURL" for="text">Contenido</label>--%>
+<%--		<div class="controls">--%>
+<%--			<richui:richTextEditor name="text" value="" width="525" />--%>
+<%--		</div>--%>
+<%--	</div>--%>
+	<div class="form-group">
+		<label for="text" class="col-sm-2 control-label">Contenido</label>
+		<div class="col-sm-9">
 			<richui:richTextEditor name="text" value="" width="525" />
 		</div>
 	</div>
-	<div class="control-group">
-		<div class="controls">
-			<g:submitButton name="create" value="Crear" class="btn btn-primary" />
+	
+<%--	<div class="control-group">--%>
+<%--		<div class="controls">--%>
+<%--			<g:submitButton name="create" value="Crear" class="btn btn-primary" />--%>
+<%--			<g:link controller="profile" action="dashboard" class="btn btn-primary">Cancelar</g:link>--%>
+<%--		</div>--%>
+<%--	</div>--%>
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+      		<g:submitButton name="create" value="Crear" class="btn btn-primary" />
 			<g:link controller="profile" action="dashboard" class="btn btn-primary">Cancelar</g:link>
-		</div>
+    	</div>
 	</div>
 </g:form>
 </div>

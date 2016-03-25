@@ -10,19 +10,31 @@
 
 		<div class="well">
 			<g:form action="createQuiz" controller="resource" class="form-horizontal" role="form">
-			<div class="control-group">
-				<label class="control-label" for="inputTitulo">Título del Cuestionario</label>
-				<div class="controls">
-					<g:textField name="title" class="span7" id="inputTitulo"
-						placeholder="Título del Cuestionario" />
+<%--			<div class="control-group">--%>
+<%--				<label class="control-label" for="inputTitulo">Título del Cuestionario</label>--%>
+<%--				<div class="controls">--%>
+<%--					<g:textField name="title" class="span7" id="inputTitulo"--%>
+<%--						placeholder="Título del Cuestionario" />--%>
+<%--				</div>--%>
+<%--			</div>--%>
+				<div class="form-group">
+					<label for="inputTitulo" class="col-sm-3 control-label">Título del Cuestionario</label>
+					<div class="col-sm-8">
+						<g:textField name="title" class="form-control" id="inputTitulo" placeholder="Titulo del Cuestionario" />
+					</div>
 				</div>
-			</div>
-			<br>
-				<div class="control-group">
-					<label class="control-label" for="inputPregunta">Pregunta</label>
-					<div class="controls">
-						<g:textField name="question" class="span7" id="inputPregunta"
-							placeholder="¿Cuál es tu pregunta?" />
+				
+<%--				<div class="control-group">--%>
+<%--					<label class="control-label" for="inputPregunta">Pregunta</label>--%>
+<%--					<div class="controls">--%>
+<%--						<g:textField name="question" class="span7" id="inputPregunta"--%>
+<%--							placeholder="¿Cuál es tu pregunta?" />--%>
+<%--					</div>--%>
+<%--				</div>--%>
+				<div class="form-group">
+					<label for="inputPregunta" class="col-sm-3 control-label">Pregunta</label>
+					<div class="col-sm-8">
+						<g:textField name="question" class="form-control" id="inputPregunta" placeholder="¿Cuál es tu pregunta?" />
 					</div>
 				</div>
 				
@@ -31,40 +43,71 @@
     				<dd>Opciones</dd>
     			</dl>
 				
-				<div class="control-group">
-					<label class="control-label" for="inputTitulo">
+				<div class="form-group">
+				
+					<label class="col-sm-2 control-label" for="controlFirstItem">
 						<g:radio name="validItem" id="validItem1" value="0" />
 					</label>
-					<div class="controls">
-						<g:textField name="firstItem" id="controlFirstItem" class="span7" placeholder="Algún ítem" />
+					<div class="col-sm-8">
+						<g:textField name="firstItem" id="controlFirstItem" class="form-control" placeholder="Algún ítem" />
 					</div> <br>
-					<label class="control-label" for="inputTitulo">
+					
+<%--					<label class="control-label" for="inputTitulo">--%>
+<%--						<g:radio name="validItem" id="validItem3" value="2" />--%>
+<%--					</label>--%>
+<%--					<div class="controls">--%>
+<%--						<g:textField name="thirdItem" id="controlThirdItem" class="span7" placeholder="Algún tercer ítem" />--%>
+<%--					</div>--%>
+				</div>
+				
+				<div class="form-group">
+					<label class="col-sm-2 control-label" for="controlSecondItem">
 						<g:radio name="validItem" id="validItem2" value="1" />
 					</label>
-					<div class="controls">
-						<g:textField name="secondItem" id="controlSecondItem" class="span7" placeholder="Algún otro ítem" />
+					<div class="col-sm-8">
+						<g:textField name="secondItem" id="controlSecondItem" class="form-control" placeholder="Algún otro ítem" />
 					</div> <br>
-					<label class="control-label" for="inputTitulo">
+				</div>
+				
+				<div class="form-group">
+					<label class="col-sm-2 control-label" for="controlThirdItem">
 						<g:radio name="validItem" id="validItem3" value="2" />
 					</label>
-					<div class="controls">
-						<g:textField name="thirdItem" id="controlThirdItem" class="span7" placeholder="Algún tercer ítem" />
+					<div class="col-sm-8">
+						<g:textField name="thirdItem" id="controlThirdItem" class="form-control" placeholder="Algún tercer ítem" />
+					</div> <br>
+				</div>
+				
+<%--				<div class="control-group">--%>
+<%--					<div class="controls">--%>
+<%--						<g:textField name="hint" id="hintItem" class="span7" placeholder="Respuesta inválida" />--%>
+<%--					</div>--%>
+<%--					<div class="controls">--%>
+<%--						<g:textField name="encourage" id="encourageItem" class="span7" placeholder="Respuesta válida" />--%>
+<%--					</div>--%>
+<%--				</div>--%>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-8">
+						<g:textField name="hint" id="hintItem" class="form-control" placeholder="Respuesta inválida" />
 					</div>
 				</div>
-				<div class="control-group">
-					<div class="controls">
-						<g:textField name="hint" id="hintItem" class="span7" placeholder="Respuesta inválida" />
-					</div>
-					<div class="controls">
-						<g:textField name="encourage" id="encourageItem" class="span7" placeholder="Respuesta válida" />
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-8">
+						<g:textField name="encourage" id="encourageItem" class="form-control" placeholder="Respuesta válida" />
 					</div>
 				</div>
 				
-				<div class="control-group">
-					<div class="controls">
-						<g:submitButton name="create" value="Crear" class="btn btn-primary" />
+<%--				<div class="control-group">--%>
+<%--					<div class="controls">--%>
+<%--						<g:submitButton name="create" value="Crear" class="btn btn-primary" />--%>
+<%--						<g:link controller="profile" action="dashboard" class="btn btn-primary">Cancelar</g:link>--%>
+<%--					</div>--%>
+<%--				</div>--%>
+				<div class="form-group">
+					<div class="col-sm-offset-2 col-sm-10">
+			      		<g:submitButton name="create" value="Crear" class="btn btn-primary" />
 						<g:link controller="profile" action="dashboard" class="btn btn-primary">Cancelar</g:link>
-					</div>
+			    	</div>
 				</div>
 			</g:form>
 		</div>

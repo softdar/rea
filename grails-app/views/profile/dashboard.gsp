@@ -18,26 +18,26 @@
 	<div class="row-fluid">
 		<div class="well">
 			<g:link controller="resource" action="create"
-				params="[type: 'Video']" class="btn btn-large" role="button">
-				<i class="icon icon-facetime-video"></i>
+				params="[type: 'Video']" class="btn btn-default" role="button">
+				<i class="glyphicon glyphicon-facetime-video"></i>
 				<br />
 				<small>Nuevo video</small>
 			</g:link>
 			<g:link controller="resource" action="create" params="[type: 'Text']"
-				class="btn btn-large" role="button">
-				<i class="icon icon-pencil"></i>
+				class="btn btn-default" role="button">
+				<i class="glyphicon glyphicon-pencil"></i>
 				<br />
 				<small>Nuevo texto</small>
 			</g:link>
 			<g:link controller="resource" action="create"
-				params="[type: 'Image']" class="btn btn-large" role="button">
-				<i class="icon icon-picture"></i>
+				params="[type: 'Image']" class="btn btn-default" role="button">
+				<i class="glyphicon glyphicon-picture"></i>
 				<br />
-				<small>Nueva im&aacute;gen</small>
+				<small>Nueva imágen</small>
 			</g:link>
 			<g:link controller="resource" action="create" params="[type: 'Quiz']"
-				class="btn btn-large" role="button">
-				<i class="icon icon-question-sign"></i>
+				class="btn btn-default" role="button">
+				<i class="glyphicon glyphicon-question-sign"></i>
 				<br />
 				<small>Nuevo cuestionario</small>
 			</g:link>
