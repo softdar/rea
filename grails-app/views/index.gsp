@@ -217,12 +217,13 @@ body {
 	margin-top: 135px;
 }
 
-footer {
+footer.f-index {
 	background-color: #666;
 	padding-top: 2em;
 	color: white;
 	text-align: center;
 	margin-top: 2em;
+	
 }
 </style>
 </head>
@@ -239,7 +240,7 @@ footer {
 							<span class="icon-bar"></span> 
 							<span class="icon-bar"></span>
 						</button>
-						<a class="navbar-brand" href="/"> 
+						<a class="navbar-brand" href="/rea"> 
 							<span class="glyphicon glyphicon-link" aria-hidden="true"></span> rea
 						</a>
 					</div>
@@ -583,7 +584,7 @@ footer {
 	</div> <!-- /.container -->
 
 	<!-- FOOTER -->
-	<footer>
+	<footer class="f-index">
 		<div class="container">
 
 			<p>

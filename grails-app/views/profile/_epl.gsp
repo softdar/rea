@@ -1,4 +1,4 @@
-<div>
+<div class="col-sm-12">
 	<div>
 <%--		<h3>--%>
 <%--			${theContent.title}--%>

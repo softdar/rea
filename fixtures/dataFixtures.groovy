@@ -33,7 +33,7 @@ fixture {
     video(VideoContent,
             title: 'Introducción',
             type: 'video',
-            url: 'http://www.youtube.com/embed/cGT_YHZ7M7s',
+            url: 'https://www.youtube.com/watch?v=vunDtx095mE',
             user: delucas
     )
 

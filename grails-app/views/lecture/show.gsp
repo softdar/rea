@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<div class="row-fluid">
+	<div class="row">
 
 		<header class="well">
 			<h1>
@@ -21,13 +21,13 @@
 	</div>
 	<div class="clear"></div>
 
-	<div class="row-fluid">
-		<div id="main" class="span9 framed">
+	<div class="row">
+		<div id="main" class="col-sm-9 framed">
 
 			<div id="theContent"></div>
 
 		</div>
-		<div id="index" class="span3 framed">
+		<div id="index" class="col-sm-3 framed">
 
 			<header>
 				<h3>Temario</h3>
@@ -53,7 +53,14 @@
 		</g:each>
 
 	</div>
-
+	
+	<div class="row">
+		<hr>
+		<footer>
+	        <p>© 2015 REA Project - UNLaM.</p>
+	    </footer>
+	</div>
+	
 	<script>
 
 		function resizeVideoIframes() {

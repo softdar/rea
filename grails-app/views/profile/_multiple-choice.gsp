@@ -1,4 +1,4 @@
-<div class="span6">
+<div class="col-sm-6">
 	<h4>
 		${resource.questions.first().question}
 	</h4>
@@ -11,7 +11,7 @@
 	</ul>
 </div>
 
-<div class="span6">
+<div class="col-sm-6">
 	<h4>Si es correcta</h4>
 	<p>${resource.questions.first().encourage}</p>
 	<h4>Si es incorrecta</h4>

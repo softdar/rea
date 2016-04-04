@@ -5,7 +5,7 @@
 			<small>por ${theContent.user.username}</small>
 		</h3>
 		<iframe
-			src="http://www.youtube.com/embed/${theContent.url.split('/').last()}"
+			src="http://www.youtube.com/embed/${theContent.url.split('=').last()}?autoplay=0"
 			frameborder="0" allowfullscreen></iframe>
 	</div>
 </div>
