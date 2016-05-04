@@ -66,4 +66,3 @@ fixture {
             contents: [video, text, image, epl]
     )
 }
-3
