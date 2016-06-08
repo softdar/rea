@@ -33,11 +33,12 @@
 				<h3>Temario</h3>
 			</header>
 			<div>
-				<ul class="nav nav-list">
+				<ul class="list-group nav-pills nav-stacked">
 
 					<g:each in="${content.target.contents}" var="theContent" status="i">
-						<li class="selectable" id="content_${i}"><a href="#content_${i}"> ${theContent.title}
-						</a></li>
+						<li class="list-group-item selectable" id="content_${i}">
+							<a href="#content_${i}"> ${theContent.title}</a>
+						</li>
 					</g:each>
 
 				</ul>
@@ -77,9 +78,9 @@
 				resizeVideoIframes();
 			});
 
-			$(".selectable").on('click', function(e) {
+			$(".list-group-item").on('click', function(e) {
 				$("#theContent").html($("div#" + $(this).attr('id')).html());
-				$(".selectable").removeClass("active");
+				$(".list-group-item").removeClass("active");
 				$(this).addClass("active");
 				resizeVideoIframes()
 			});

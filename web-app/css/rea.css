@@ -44,7 +44,8 @@ div.framed div.text {
 }
 
 li.selectable {
-	list-style:none;
+	/*list-style:none;*/
+	border: none; 
 }
 
 .justified {
