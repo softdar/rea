@@ -18,6 +18,11 @@ fixture {
             username: 'mavromou',
             password: 'seguridad'
     )
+	
+	softdar(User,
+		username: 'softdar',
+		password: 'pwd-softdar'
+	)
 
     teacher(Role,
             authority: 'ROLE_TEACHER')
@@ -29,6 +34,10 @@ fixture {
     hernanTeacher(UserRole,
             user: hernan,
             role: teacher)
+	
+	softdarTeacher(UserRole,
+			user: softdar,
+			role: teacher)
 
     video(VideoContent,
             title: 'Introducción',
@@ -59,7 +68,7 @@ fixture {
     )
 
     lecture(Lecture,
-            name: 'probabilidad',
+			name: 'probabilidad',
             title: 'Nociones de probabilidad',
             brief: 'Esta es una introducción breve a la probabilidad que pretende demostrar cómo funciona la plataforma básica',
             user: delucas,

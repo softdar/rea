@@ -48,6 +48,12 @@
 				<br />
 				<small>Nuevo cuestionario</small>
 			</g:link>
+			<g:link controller="resource" action="create" params="[type: 'EPL']"
+				class="btn btn-default" role="button">
+				<i class="glyphicon glyphicon-list-alt"></i>
+				<br />
+				<small>Nuevo eXelearning</small>
+			</g:link>
 		</div>
 	</div> <!-- Fin íconos de creación de recursos -->
 

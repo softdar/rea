@@ -2,6 +2,7 @@ package rea
 
 import grails.plugin.springsecurity.annotation.Secured
 import rea.content.Content
+import rea.content.EPLContent
 import rea.content.ImageContent
 import rea.content.OptionContent
 import rea.content.QuestionContent
@@ -14,7 +15,6 @@ class ResourceController {
 	def springSecurityService
 	
 //	@Secured('ROLE_TEACHER')
-//	// XXX: bogus
 //	def delete(Long id) {
 //		// chequear que solo son contenidos del usuario actual
 //		Content remove = Content.get(id)
@@ -50,6 +50,20 @@ class ResourceController {
 			title: title)
 		
 		video.save(failOnError: true)
+
+		redirect(controller: 'profile', action: 'dashboard')
+	}
+	
+	@Secured('ROLE_TEACHER')
+	def createEPL(String title, String url) {
+
+		def user = springSecurityService.currentUser
+		def eplContent = new EPLContent(type: 'epl',
+			url: url,
+			user: user,
+			title: title)
+		
+		eplContent.save(failOnError: true)
 
 		redirect(controller: 'profile', action: 'dashboard')
 	}
